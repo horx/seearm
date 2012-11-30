@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(:version => 20121122080751) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.string   "pictures"
-    t.integer  "category"
-    t.decimal  "price",      :precision => 10, :scale => 0
+    t.integer  "category_id"
+    t.decimal  "price",       :precision => 10, :scale => 0
     t.boolean  "status"
     t.string   "keywords"
     t.text     "content"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
 end
