@@ -4,7 +4,7 @@
     <legend></legend>
       <%= f.input :name %>
       <%= f.input :price %>
-      <%= f.input :category, :collection => Category.all.collect { |s| [s.name,s.id] } %>
+      <%= f.input :category_id, :collection => Category.all.collect { |s| [s.name,s.id] } %>
       <%= f.input :keywords, :input_html => {:class => "xxlarge"} %>
       <%= f.input :content, :as => :kindeditor, :label => false, :input_html => { :width => 800, :height => 300 } %>
       <div class="form-actions">
