@@ -1,0 +1,30 @@
+<% content_for :sitemap do %>
+  <span class="current"><%= t("cpanel.menu.categories_list")%></span>
+<% end %>
+<h1><%= t("cpanel.menu.categories_list")%></h1>
+
+<table class="table table-bordered table-striped table-condensed">
+  <tr class="head">
+    <td class="first">分类ID</td>
+    <td>分类名称</td>
+    <td>缩略名</td>
+    <td>描述</td>
+    <td class="opts">操作</td>
+  </tr>
+
+<% @categories.each do |cat| %>
+  <tr>
+    <td class="first"><%= cat.id %></td>
+    <td><%= cat.name %></td>
+    <td><%= cat.slug %></td>
+    <td><%= cat.desc %></td>
+    <td>
+      <%= link_to "编辑", edit_cpanel_category_path(cat.id), :class => "icon small_edit" %>
+      <%= link_to "删除", cpanel_category_path(cat.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<a href="<%= new_cpanel_category_path %>" class="btn btn-small btn-success"><%= t("cpanel.common.create") %></a>

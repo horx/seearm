@@ -1,0 +1,25 @@
+.bundle
+tmp/*
+coverage/
+db/*.sqlite3
+tmp/
+log/*.log
+log/*.log*
+tmp/**/*
+.sass-cache/
+public/assets/
+public/uploads/**/*
+.redcar
+.DS_Store
+*.swp
+*.swo
+.rvmrc
+vendor/ruby
+tags
+chromedriver.log
+.gitkeep
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+/public/uploads/*
+Gemfile.lock

@@ -1,0 +1,12 @@
+<%= simple_form_for([:cpanel,@category]) do |f| %>
+  <fieldset>
+    <legend></legend>
+    <%= f.input :name %>
+    <%= f.input :slug %>
+    <%= f.input :desc, :input_html => {:class => "xxlarge", :rows => 3} %>
+    <div class="form-actions">
+      <%= f.submit t("cpanel.common.save"), :class => "btn btn-primary", 'data-disable-with' => t("cpanel.common.saving") %>
+      <%= link_to 'Back', cpanel_categories_path %>
+    </div>
+  </fieldset>
+<% end %>

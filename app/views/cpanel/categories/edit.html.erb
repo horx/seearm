@@ -1,0 +1,5 @@
+<% content_for :sitemap do %>
+  <a href="<%= cpanel_categories_path %>"><%= t("cpane.menu.categories")%></a> &gt; <span class="current"><%= t("common.edit")%></span>
+<% end %>
+<h1>编辑分类</h1>
+<%= render 'form' %>

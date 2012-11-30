@@ -1,0 +1,5 @@
+<% content_for :sitemap do %>
+  <a href="<%= cpanel_products_path %>"><%= t("cpanel.menu.products")%></a> &gt; <span class="current"><%= t("common.create")%></span>
+<% end %>
+<h1>添加产品</h1>
+<%= render 'form' %>

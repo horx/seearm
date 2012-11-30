@@ -1,0 +1,17 @@
+<div id="cpanel_product" class="form">
+<%= simple_form_for([:cpanel,@product]) do |f| %>
+  <fieldset>
+    <legend></legend>
+      <%= f.input :name %>
+      <%= f.input :price %>
+      <%= f.input :category, :collection => Category.all.collect { |s| [s.name,s.id] } %>
+      <%= f.input :keywords, :input_html => {:class => "xxlarge"} %>
+      <%= f.input :content, :as => :kindeditor, :label => false, :input_html => { :width => 800, :height => 300 } %>
+      <div class="form-actions">
+      <%= f.submit t("cpanel.common.save"), :class => "btn btn-primary", 'data-disable-with' => t("cpanel.common.saving") %>
+      or
+      <%= link_to t("common.cancel"), cpanel_products_path %>
+    </div>
+  </fieldset>
+<% end %>
+</div>

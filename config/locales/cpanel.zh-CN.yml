@@ -1,0 +1,27 @@
+"zh-CN":
+  cpanel:
+    menu:
+      cpanel_root: "控制台"
+      root_path: "前台"
+      categories: "分类"
+      categories_list: "分类列表"
+      products: "产品"
+      products_list: "产品列表"
+
+    common:
+      edit: "修改"
+      create: "新建"
+      save: "保存"
+      saving: "正在保存"
+      submitting: "正在提交"
+      delete: "删除"
+      undelete: "恢复"
+      upload: "上传"
+      uploading: "正在上传"
+      published_at: "发表于"
+      register: "注册"
+      login: "登录"
+      logining: "正在登录"
+      logout: "退出"
+      remember_me: "记住登录状态"
+      cancel: "取消"

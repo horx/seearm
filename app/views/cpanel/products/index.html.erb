@@ -1,0 +1,32 @@
+<% content_for :sitemap do %>
+  <span class="current"><%= t("cpanel.menu.products_list")%></span>
+<% end %>
+<h1>产品列表</h1>
+<div id="cpanel_product">
+  <table class="table table-bordered table-striped table-condensed">
+    <tr class="head">
+      <th>产品ID</th>
+      <th>产品名</th>
+      <th>分类</th>
+      <th>价格</th>
+      <th>状态</th>
+      <th class="opts">操作</th>
+    </tr>
+    <% @products.each do |product| %>
+    <tr class="<%= cycle("","even") %>">
+      <td><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.category %></td>
+      <td><%= product.price %></td>
+      <td><%= product.status %></td>
+      <td>
+        <%= link_to t("cpanel.common.edit"), edit_cpanel_product_path(product.id), :class => "icon small_edit" %>
+        <%= link_to t("cpanel.common.delete"), cpanel_product_path(product.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+<div class="tools">
+  <a href="<%= new_cpanel_product_path %>" class="btn btn-small btn-success"><%= t("cpanel.common.create") %></a>
+</div>
