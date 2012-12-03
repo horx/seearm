@@ -431,7 +431,7 @@ input {
     margin: 0 -50px;
     color: #777;    
     font-size: 11px;
-    text-transform: uppercase;
+/*    text-transform: uppercase; */
     background: #000;
     border-top: 1px solid #000;
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
@@ -447,10 +447,10 @@ input {
 #copyright a {
     color: #FFF;
 }
+
 /*------------------------------------------------------------------
 [12. Grid]
 */
-
 [class^="grid-"] {
     float: left;
     margin: 0 0 0 20px;
