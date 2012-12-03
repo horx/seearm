@@ -14,7 +14,7 @@ public/uploads/**/*
 *.swp
 *.swo
 .rvmrc
-vendor/ruby
+vendor/*
 tags
 chromedriver.log
 .gitkeep
@@ -22,4 +22,5 @@ chromedriver.log
 /log/*.log
 /tmp
 /public/uploads/*
+manifest.yml
 Gemfile.lock

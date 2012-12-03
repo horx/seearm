@@ -27,7 +27,9 @@ gem "mini_magick", "~> 3.4"
 gem 'rails_kindeditor', '~> 0.3.10'
 # 表单
 gem 'simple_form'
-gem 'jquery-rails'
+#gem 'jquery-rails'
+#在APPFOG测试用
+gem 'cloudfoundry-jquery-rails'
 # 分页
 gem 'will_paginate', '3.0.2'
 # 分享功能
