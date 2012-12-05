@@ -1,3 +1,4 @@
+timeout 30
 root = "/www/seearm/"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
