@@ -4,13 +4,13 @@
         	<div class="grid-3">
                     <div class="work-item">
                         
-                        <h3><%= pruduct.name %></h3>
+                        <h3><%= @pruduct.name %></h3>
                         
                         <a class="thumbnail">
-                            <%= image_tag pruduct.pictures %>
+                            <%= image_tag @pruduct.pictures.to_s %>
                         </a> <!-- /img -->
                         
-                        <p><%= pruduct.content %></p>
+                        <p><%= @pruduct.content %></p>
                         
                         <p><a href="javascript:;" class="">More »</a></p>           
                     </div>
