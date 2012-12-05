@@ -15,7 +15,7 @@
     <% @products.each do |product| %>
     <tr class="<%= cycle("","even") %>">
       <td><%= product.id %></td>
-      <td><%= product.name %></td>
+      <td><%= link_to product.name, products_details_path(product.id) %></td>
       <td><%= product.category.name %></td>
       <td><%= product.price %></td>
       <td><%= product.status %></td>
