@@ -7,7 +7,6 @@ gem 'rails', '3.2.9'
 
 gem 'mysql2'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,9 +26,9 @@ gem "mini_magick", "~> 3.4"
 gem 'rails_kindeditor', '~> 0.3.10'
 # 表单
 gem 'simple_form'
-#gem 'jquery-rails'
+gem 'jquery-rails'
 #在APPFOG测试用
-gem 'cloudfoundry-jquery-rails'
+#gem 'cloudfoundry-jquery-rails'
 # 分页
 gem 'will_paginate', '3.0.2'
 # 分享功能
@@ -45,8 +44,10 @@ gem 'bootstrap_helper', "1.4.1"
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
+group :production do
 # Use unicorn as the app server
-# gem 'unicorn'
+  gem 'unicorn'
+end
 
 # Deploy with Capistrano
 # gem 'capistrano'
