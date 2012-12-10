@@ -20,7 +20,6 @@
     
     #header {
         padding: 25px 0;
-        
         text-align: center;
     }
     
@@ -42,7 +41,6 @@
     
     #seearm {
         height: auto;
-        
         -moz-box-shadow: none;
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -50,34 +48,28 @@
     
     #seearm .seearm-details {
         position: static;
-        
         display: block;
-        
         width: auto;
         height: auto;
     }
     
     .seearm-details h2 {
         margin-bottom: .75em;
-        
         font-size: 20px;
     }
     
     .seearm-details p {   
-        font-size: 11px;    
+        font-size: 11px;
     }
     
     #seearm .carousel-control {
         top: 5%;
         left: 20px;
-        
         width: 25px;
         height: 25px;
         margin-top: 0;
-        
         font-size: 30px;
         line-height: 19px;
-        
         opacity: .80;
     }
     
@@ -85,15 +77,12 @@
         left: auto;
         right: 20px;
     }
-    
-    
-    
+
     #page-title {
         padding: 20px;
         margin-right: 0;
         margin-bottom: 1em;
         margin-left: 0;
-        
         text-align: center;
     }
     
@@ -121,8 +110,7 @@
     
     [class^="grid-"] {
         float: none;
-        
-        width: auto;        
+        width: auto;
         margin: 0 0 3em 0;
     }
     
