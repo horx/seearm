@@ -9,8 +9,7 @@
                         <a class="thumbnail">
                             <%= image_tag @product.pictures %>
                         </a> <!-- /img -->
-                        
-                        <p><%= @product.content %></p>
+                        <p><%= raw @product.content %></p>
                         
                         <p><a href="javascript:;" class="">More »</a></p>           
                     </div>
