@@ -1,12 +1,14 @@
 Seearm::Application.routes.draw do
   
-  root :to => "home#index"
   namespace :cpanel do
     root :to => "home#index"
     resources :categories
     resources :products
   end
+  match "products", :to => "products#index", :as => :products_index
   match "products/:id", :to => "products#show", :as => :products_details
+
+  root :to => "home#index"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
