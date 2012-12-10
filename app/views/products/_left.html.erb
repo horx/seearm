@@ -1,5 +1,12 @@
-<% @categories.each do |category| %>
 <div class="sidebar">
-  <%= category.name %>
+<div class="span3">
+    <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header">产品分类</li>
+            <% @categories.each do |category| %>
+                <li><%= link_to category.name,"#" %></li>
+            <% end %>
+        </ul>
+    </div><!--/.well -->
+</div><!--/span-->
 </div>
-<% end %>

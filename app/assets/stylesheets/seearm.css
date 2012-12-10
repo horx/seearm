@@ -1,9 +1,9 @@
 @import url('font-awesome.css');
+/*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800);
-
-
+ */
+@import url('google-font.css');
 /*------------------------------------------------------------------
-
 [Table of contents]
 
     1. Global
