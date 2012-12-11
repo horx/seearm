@@ -22,8 +22,7 @@
                 <%= link_to "首页",root_path %>
             </h1>
         </div> <!-- /container -->
-    </div> <!-- /header --> 
-    
+    </div> <!-- /header -->
     <div id="nav" class="clearfix">
         <div class="container">
             <ul id="main-nav">
@@ -36,12 +35,11 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="javascript:;"><i class="icon-home"></i> 分类 #1</a></li>
-                        <li><a href="javascript:;"><i class="icon-beaker"></i> 分类 #2</a></li>
-                        <li><a href="javascript:;"><i class="icon-bullhorn"></i> 分类 #3</a></li>
-                        <li><a href="javascript:;"><i class="icon-cloud"></i> 分类 #4</a></li>
+                        <% Category.all.each do |category| %>
+                        <li><a href="<%= category_path(category.slug) %>"><i class="icon-book"></i><%= category.name %></a></li>
+                         <% end %>
                     </ul>
-                </li>               
+                </li>              
                 <li>
                     <%= link_to "新闻动态",root_path %>
                 </li>

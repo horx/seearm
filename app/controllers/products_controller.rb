@@ -1,7 +1,9 @@
+# coding: utf-8
 class ProductsController < ApplicationController
-  
-  def index
-  	@categories = Category.all
+
+  #产品分类
+  def cat
+  	@cats = Category.find_by_slug(params[:slug])
   end
   def show
     @product = Product.find(params[:id])

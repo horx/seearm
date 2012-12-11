@@ -1,3 +1,4 @@
+# coding: utf-8
 class Cpanel::CategoriesController < Cpanel::ApplicationController
   before_filter :find_category, :only => [ :edit, :update, :destroy]
   def index
