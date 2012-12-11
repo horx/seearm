@@ -35,9 +35,9 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <% Category.all.each do |category| %>
+                    <% Category.all.each do |category| %>
                         <li><a href="<%= category_path(category.slug) %>"><i class="icon-book"></i><%= category.name %></a></li>
-                         <% end %>
+                    <% end %>
                     </ul>
                 </li>              
                 <li>
