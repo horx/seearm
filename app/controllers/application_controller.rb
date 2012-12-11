@@ -18,4 +18,28 @@ class ApplicationController < ActionController::Base
       render :template => "/errors/unknown", :format => [:html], :handler => [:erb], :status => status, :layout => "application"
     end
   end
+
+  def notice_success(msg)
+    flash[:notice] = msg
+  end
+
+  def notice_error(msg)
+    flash[:notice] = msg
+  end
+
+  def notice_warning(msg)
+    flash[:notice] = msg
+  end
+
+  def set_seo_meta(title = '',meta_keywords = '', meta_description = '')
+    if title.length > 0
+      @page_title = "#{title}"
+    end
+    @meta_keywords = meta_keywords
+    @meta_description = meta_description
+  end
+
+  def store_location
+    session[:return_to] = request.request_uri
+  end
 end
