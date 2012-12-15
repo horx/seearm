@@ -556,7 +556,7 @@ input {
 .clearfix:after,
 .row:after { content: ""; display: table; }
 .clearfix:after,
-.row:after { clear: both; 
+.row:after { clear: both;}
 
 /*
 [14]. Side Bar
