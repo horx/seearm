@@ -1,6 +1,6 @@
 source 'http://ruby.taobao.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -34,7 +34,7 @@ gem 'will_paginate', '3.0.2'
 # 分享功能
 gem "social-share-button"
 # Bootstrap
-gem 'anjlab-bootstrap-rails', '>= 2.2.1.2', :require => 'bootstrap-rails'
+gem 'anjlab-bootstrap-rails', '>= 2.2.2.1', :require => 'bootstrap-rails'
 gem 'bootstrap-will_paginate', '0.0.3'
 gem 'bootstrap_helper', "1.4.1"
 

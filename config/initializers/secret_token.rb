@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Seearm::Application.config.secret_token = 'd88b19feaca7296a2262903b94b8c0ceabdfb943bb34260e266ba56d41972d3a2b97cc1b3f5e37fc419917f3a0b1089d63c4a9c15e2b14557265115090ce2729'
+Seearm::Application.config.secret_token = '60edf7633666de918a2fb60e5b0b6ea7654790349024269366b01ccd04890c254a0fa2b347f3d0c93ef56ba2b8275329304fbc1784c59d547464ec4af82c19d6'

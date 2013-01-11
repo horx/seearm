@@ -9,7 +9,6 @@ Seearm::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  # 在APPFOG测试用改为true,default false
   config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
@@ -47,8 +46,7 @@ Seearm::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( app.js )
-
+  config.assets.precompile += %w( app.js cpanel.js cpanel.css)
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
