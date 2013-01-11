@@ -47,10 +47,7 @@ Seearm::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( app.js cpanel.js cpanel.css)
-<<<<<<< HEAD
-=======
 
->>>>>>> e170eb18846e4bbc9a12d77f1d8f8301b1fb83d0
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
