@@ -2,8 +2,8 @@
 class Cpanel::ProductsController < Cpanel::ApplicationController
   before_filter :find_product, :only => [ :edit, :update, :destroy]
   def index
-  	#@products = Product.paginate( :page => params[:page], :per_page => 15 )
-    @products = Product.all
+  	@products = Product.paginate( :page => params[:page], :per_page => 15 )
+    #@products = Product.all
   end
 
   def new
