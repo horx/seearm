@@ -9,7 +9,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:horx/#{application}.git"
+set :repository, "git@github.com:HorX/seearm.git"
 set :branch, "master"
 
 #role :web, "nginx"                          # Your HTTP server, Apache/etc
