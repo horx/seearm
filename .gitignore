@@ -22,5 +22,5 @@ chromedriver.log
 /log/*.log
 /tmp
 /public/uploads/*
+config/database.yml
 manifest.yml
-Gemfile.lock

@@ -1,5 +1,4 @@
-timeout 30
-root = "/www/seearm/"
+root = "/home/lucy/apps/seearm/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
