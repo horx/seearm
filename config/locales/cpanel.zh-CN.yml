@@ -1,5 +1,7 @@
 "zh-CN":
   cpanel:
+    home:
+      index: "控制台首页"
     menu:
       cpanel_root: "控制台"
       root_path: "前台"
