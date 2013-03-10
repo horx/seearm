@@ -9,11 +9,8 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:HorX/seearm.git"
+set :repository, "git@github.com:HOrX/#{application}.git"
 set :branch, "master"
-
-#role :web, "nginx"                          # Your HTTP server, Apache/etc
-#role :db,  "seearm_production", :primary => true # This is where Rails migrations will run
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
