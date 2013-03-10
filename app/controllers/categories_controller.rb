@@ -1,7 +1,8 @@
 # coding: utf-8
 class CategoriesController < ApplicationController
-  before_filter :find_category, :only => [:show]
+  #before_filter :find_category, :only => [:show]
   def show
+    puts params
   end
 
   protected
@@ -11,7 +12,7 @@ class CategoriesController < ApplicationController
       redirect_to request.path.downcase, :status => 301
       return
     end
-    @category = Category.where(:slug => params[:id]).first
+    @category = Category.where(:slug => params[:slug]).first
     render_404 if @category.nil?
   end
 
