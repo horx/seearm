@@ -1,17 +1,20 @@
 <div id="content">
 	<div class="container">
 		<div class="row work-container">
-        	<div class="grid-3">
+
+            <div class="grid-3">
                     <div class="work-item">
-                        
                         <h3><%= @product.name %></h3>
-                        
+                        <p>hello</p>  
+                    </div>
+            </div>
+        	<div class="grid-9">
+                    <div class="work-item">
+                        <h3><%= @product.name %></h3>
                         <a class="thumbnail">
                             <%= image_tag @product.pictures %>
                         </a> <!-- /img -->
-                        <p><%= raw @product.content %></p>
-                        
-                        <p><a href="javascript:;" class="">More »</a></p>           
+                        <p><%= raw @product.content %></p>  
                     </div>
             </div>
     	</div>

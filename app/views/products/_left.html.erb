@@ -1,12 +1,11 @@
-<div class="sidebar">
+
 <div class="span3">
     <div class="well sidebar-nav">
         <ul class="nav nav-list">
             <li class="nav-header">产品分类</li>
             <% @categories.each do |category| %>
-                <li><%= link_to category.name,"#" %></li>
+                <li><%= link_to category.name,categories_details_path(category.slug.downcase) %></li>
             <% end %>
         </ul>
     </div><!--/.well -->
 </div><!--/span-->
-</div>

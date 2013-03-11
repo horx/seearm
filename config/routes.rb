@@ -6,6 +6,7 @@ Seearm::Application.routes.draw do
     resources :products
   end
 
+  match "products", :to => "products#index", :as => :products_lists
   match "products/:id", :to => "products#show", :as => :products_details
   root :to => "home#index"
 
