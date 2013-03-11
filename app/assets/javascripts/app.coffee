@@ -1,5 +1,4 @@
 #= require jquery
 #= require twitter/bootstrap
-#= seearm
-#= require will_paginate
+#= require seearm
 #= require_self

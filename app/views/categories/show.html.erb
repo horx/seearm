@@ -14,7 +14,7 @@
 						<h4><%= link_to product.name,products_details_path(product.id) %></h4>
 						<img src="<%= product.pictures%>" alt="<%= product.name%>">
 						<p class="product-detail-title"><%= link_to product.name,products_details_path(product.id) %></p>
-						<p>Mauris viverra, tortor eget interdum lacinia, lacus mi tempor purus, eu commodo enim dui ac nisl. Morbi euismod ante quis tellus imperdiet porta. Morbi nisi nibh, facilisis a varius id, adipiscing vel purus.</p>
+						<p><%= raw(product.content).truncate(135) %><%= link_to t("front.products.products_detail"),products_details_path(product.id) %></p>
 						
 					</div> <!-- /profile -->
 				</div> <!-- /grid-4 -->
