@@ -48,13 +48,5 @@ namespace :deploy do
     end
   end
 
-  after "deploy:setup", "deploy:mark_revision"
-  task :mark_revision do
-    log = "#{deploy_to}/revisions.log"
-    run "(test -e #{log} || touch #{log} && chmod 666 #{log}) && " +
-    "echo #{latest_revision} >> #{log};"
-  end
-
-
   before "deploy", "deploy:check_revision"
 end
