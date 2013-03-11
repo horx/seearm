@@ -1,8 +1,15 @@
 # coding: utf-8
 class CategoriesController < ApplicationController
   #before_filter :find_category, :only => [:show]
+
+  def index
+    @categories = Category.all
+  end
+
   def show
-    puts params
+    find_category
+    @products = Product.where(:category_id => @category.id)
+    #@products = Product.find_products_by_category_id(@category['id'])
   end
 
   protected
@@ -12,8 +19,7 @@ class CategoriesController < ApplicationController
       redirect_to request.path.downcase, :status => 301
       return
     end
-    @category = Category.where(:slug => params[:slug]).first
+    @category = Category.where(:slug => params[:id]).first
     render_404 if @category.nil?
   end
-
 end

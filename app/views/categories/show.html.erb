@@ -1,2 +1,25 @@
-<%= @category.slug %>
-<%= @category.name %>
+    <div id="page-title">
+		
+		<h2><%= @category.name %></h2>
+		<p><%= @category.desc %></p>
+		
+	</div> <!-- /page-title -->
+	
+	<div id="content">
+		<div class="container">
+			<div class="row">
+			<% @products.each do |product| %>
+				<div class="grid-4">	
+					<div class="product-detail">
+						<h4><%= link_to product.name,products_details_path(product.id) %></h4>
+						<img src="<%= product.pictures%>" alt="<%= product.name%>">
+						<p class="product-detail-title"><%= link_to product.name,products_details_path(product.id) %></p>
+						<p>Mauris viverra, tortor eget interdum lacinia, lacus mi tempor purus, eu commodo enim dui ac nisl. Morbi euismod ante quis tellus imperdiet porta. Morbi nisi nibh, facilisis a varius id, adipiscing vel purus.</p>
+						
+					</div> <!-- /profile -->
+				</div> <!-- /grid-4 -->
+			<% end %>
+			</div> <!-- /row -->
+			
+		</div> <!-- /container -->
+	</div> <!-- /content -->

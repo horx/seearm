@@ -9,7 +9,8 @@ Seearm::Application.routes.draw do
   match "products/:id", :to => "products#show", :as => :products_details
   root :to => "home#index"
 
-  resources :categories, :path => ""
+  match "categories", :to => "categories#index", :as => :categories_lists
+  match "categories/:id", :to => "categories#show", :as => :categories_details
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

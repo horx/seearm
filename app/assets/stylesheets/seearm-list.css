@@ -1,0 +1,25 @@
+.product-detail {
+	text-align: center;
+}
+
+.product-detail img {
+	display: inline-block;
+	width: 240px;
+	height: 240px;
+	margin: 0 auto 1.25em;
+}
+
+.product-detail h4 {
+	margin-bottom: .85em;
+	
+	font-size: 18px;
+}
+
+.product-detail .product-detail-title {
+	margin-bottom: 1em;
+	
+	color: #777;
+	
+	font-size: 16px;
+	font-style: italic;
+}

@@ -36,7 +36,7 @@
                     </a>
                     <ul class="dropdown-menu">
                     <% Category.all.each do |category| %>
-                        <li><a href="<%= category_path(category.slug) %>"><i class="icon-book"></i><%= category.name %></a></li>
+                        <li><a href="<%= categories_details_path(category.slug.downcase) %>"><i class="icon-book"></i><%= category.name %></a></li>
                     <% end %>
                     </ul>
                 </li>              
