@@ -1,4 +1,4 @@
 #= require_self
 #= require jquery
-#= require twitter/bootstrap
+#= require bootstrap.min
 #= require seearm
