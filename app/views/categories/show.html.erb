@@ -11,10 +11,10 @@
 			<% @products.each do |product| %>
 				<div class="grid-4">	
 					<div class="product-detail">
-						<h4><%= link_to product.name,products_details_path(product.id) %></h4>
+						<h4><%= link_to product.name,products_details_path(product.id),target: "blank" %></h4>
 						<img src="<%= product.pictures%>" alt="<%= product.name%>">
-						<p class="product-detail-title"><%= link_to product.name,products_details_path(product.id) %></p>
-						<p><%= raw(product.content).truncate(135) %><%= link_to t("front.products.products_detail"),products_details_path(product.id) %></p>
+						<p class="product-detail-title"><%= link_to product.name,products_details_path(product.id),target: "blank" %></p>
+						<p><%= raw(product.content.truncate(135)) %><%= link_to t("front.products.products_detail"),products_details_path(product.id),target: "blank" %></p>
 						
 					</div> <!-- /profile -->
 				</div> <!-- /grid-4 -->
