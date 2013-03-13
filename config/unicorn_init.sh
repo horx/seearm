@@ -12,10 +12,10 @@ set -e
 
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/home/see_app/apps/seearm/current
+APP_ROOT=/home/see-app/apps/seearm/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
-AS_USER=see_app
+AS_USER=see-app
 set -u
 
 OLD_PIN="$PID.oldbin"
