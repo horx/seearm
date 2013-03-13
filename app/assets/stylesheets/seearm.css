@@ -550,7 +550,7 @@ input {
     background-position: -100px -50px;
 }
 .clearfix,
-.row { zoom: 1; }
+.row { zoom: 1; margin-left: 0px;}
 .clearfix:before,
 .row:before,
 .clearfix:after,
