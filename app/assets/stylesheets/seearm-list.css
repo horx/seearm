@@ -23,3 +23,14 @@
 	font-size: 16px;
 	font-style: italic;
 }
+
+.product-right {
+	float: left;
+	padding-left: 20px;
+	width: 90%;
+}
+.product-content {
+	float: left;
+	padding-left: 20px;
+	width: 90%;
+}

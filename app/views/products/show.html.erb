@@ -1,33 +1,61 @@
-    <div id="content">
-        
-        <div class="container">
-            
-            <div class="row">
-                
-                <div class="grid-5">
-                    
-                    <h2><span class="slash">//</span> Our Philosophy</h2>
-                    
-                    <p>Nullam ligula sapien, pharetra eget volutpat vel, consequat in lectus.</p>
-                    
-                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Vivamus purus arcu, commodo cursus egestas et, dictum lobortis dui. Curabitur at mi eu mi sollicitudin faucibus at at libero.</p>
-                    
-                </div> <!-- /grid-6 -->
-                
-                
-                <div class="grid-7">
-                    
-                    <h2><span class="slash">//</span> Our Mission</h2>
-                    
-                    <p>Mauris viverra, tortor eget interdum lacinia, lacus mi tempor purus, eu commodo enim dui ac nisl. Morbi euismod ante quis tellus imperdiet porta. Morbi nisi nibh, facilisis a varius id, adipiscing vel purus.</p>
-                    
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                
-                </div> <!-- /grid-6 -->
-                
-            </div> <!-- /row -->
-            
-            
-            <hr class="row-divider" />
-</div>
+<div id="content">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="grid-5">
+
+                <h2>
+                    <span class="slash"></span>
+                    产品图片
+                </h2>
+                <div class="thumbnail">
+                    <img src="<%= @product.pictures %>" alt="<%= @product.name %>">
+                </div>
+
+            </div>
+            <!-- /grid-5 -->
+
+            <div class="grid-7">
+
+                <h2>
+                    <span class="slash"></span>
+                    产品信息
+                </h2>
+                <div class="product-right">
+                    <p> <strong>产品名称:</strong>
+                    </p>
+                    <p> <strong>产品类别:</strong>
+                    </p>
+                    <p>
+                        <strong>产　　商:</strong>
+                    </p>
+                    <p>
+                        <strong>价　　格:</strong>
+                    </p>
+                    <p>
+                        <strong>购买方式:</strong>
+                    </p>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+            </div>
+            <!-- /grid-7 --> 
+        </div>
+        <!-- /row -->
+        <hr class="row-divider" />
+
+        <div class="row">
+            <div class="grid-12">
+                <h2>
+                    <span class="slash"></span>
+                    产品介绍
+                </h2>
+                <p class="product-content">
+                    <%= raw(@product.content) %>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
