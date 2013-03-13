@@ -1,17 +1,9 @@
-@import url("font-awesome.css");
+@import url('font-awesome.css');
+/*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800);
-
-
+ */
+@import url('google-font.css');
 /*------------------------------------------------------------------
-
-[Layout Stylesheet]
-
-    Project:        Focus Business
-    Version:        1.0
-    Last change:    06/24/2012
-    Assigned to:    Rod Howard (rh)
-
-
 [Table of contents]
 
     1. Global
@@ -27,10 +19,8 @@
     11. Copyright / #copyright
     12. Grid / .grid
     13. Miscellaneous
-
+    14. Side Bar
 -------------------------------------------------------------------*/
-
-
 
 /*------------------------------------------------------------------
 [1. Global]
@@ -38,45 +28,31 @@
 
 body {
     margin: 0;
-    
     font: 12px/1.7em 'Open Sans', arial, sans-serif;
-    
-    background: #DDD url(../img/bg.png) repeat 0 0;
+    background: #DDD url('s_bg.png') repeat 0 0;
 }
-
 p { 
     margin-bottom: 2em;
-    
     font: 12px/1.7em 'Open Sans', arial, sans-serif;
 }
-
 h1 {
     margin-bottom: .25em;
 }
-
 h2 {
     margin-bottom: .5em;
-    
     font-size: 22px;
-    font-weight: 600;   
+    font-weight: 600;
 }
-
 h3 {
     margin-bottom: .75em;
-    
     font-weight: 600
 }
-
 h4, h5, h6 {
     margin-bottom: 1.25em;
 }
-
 input {
     font: 13px/1.7em 'Open Sans', arial, sans-serif;
 }
-
-
-
 
 /*------------------------------------------------------------------
 [2. Wrapper]
@@ -86,20 +62,14 @@ input {
     width: 880px;
     padding: 0 50px;
     margin: 0 auto;
-    
     background: #FFF;
-    
     border: 1px solid #DDD\9;
     border-top: 12px solid #222;
     border-bottom: none;
-    
     -moz-box-shadow: 0 0 5px rgba(0,0,0,.25);
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,.25);
     box-shadow: 0 0 5px rgba(0,0,0,.25);
 }
-
-
-
 
 /*------------------------------------------------------------------
 [3. Header]
@@ -108,30 +78,24 @@ input {
 #header {
     padding: 35px 0;
 }
-
 #header h1 {
     overflow: hidden;
-    
     width: 252px;
     height: 42px;
     margin: 0;
-    
     line-height: 600px;
-    
-    background: url(../img/title.png) no-repeat 0 0;
+    background: url('title.png') no-repeat 0 0;
 }
-
 #header h1 a {
     display: block;
 }
 
-
-
-
 /*------------------------------------------------------------------
 [4. Nav]
 */
-
+.container {
+    width: 880px;
+}
 #nav {
     margin-bottom: .5em;
 }
@@ -239,9 +203,6 @@ input {
     left: 10px;
 }
 
-
-
-
 /*------------------------------------------------------------------
 [5. Responsive Nav / #responsive-nav]
 */
@@ -251,7 +212,7 @@ input {
     padding: 5px 10px;
     
     background-color: #F8F8F8;
-    background-image: url(../img/responsive-nav-bg.png);
+    background-image: url('responsive-nav-bg.png');
     background-position: center right;
     background-repeat: no-repeat;
     
@@ -268,7 +229,6 @@ input {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-
 #responsive-nav-trigger.open {
     -webkit-border-bottom-right-radius: 0;
     -webkit-border-bottom-left-radius: 0;
@@ -277,27 +237,19 @@ input {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
-        
 #responsive-nav {
     position: relative;
     z-index: 1001;
-    
     display: none;
-    
     margin: 0 0 2em;
 }
-
 #responsive-nav-items {
     display: none;
-    
     padding: 12px 10px;
     margin: 0 0 1.5em;
-    
     background: #F8F8F8;
-    
     border: 1px solid #e3e3e3;
     border-top: none;
-    
     -webkit-border-bottom-right-radius: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -moz-border-radius-bottomright: 5px;
@@ -305,62 +257,42 @@ input {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-
 #responsive-nav-items ul {
     padding: 0;
     margin: 0;
 }
-
 #responsive-nav-items li {  
     list-style: none;
 }
-
 #responsive-nav-items > li > ul > li > a {
     padding-left: 30px;
 }
-
 #responsive-nav-items a {
     padding: 8px 10px;
-    
     display: block;
-    
     color: #222;
-    
     font-size: 13px;
     font-weight: 600;
-    
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-
 #responsive-nav-items a:hover {
     text-decoration: none;
-    
     background: #DDD;
 }
-
 #responsive-nav-items li.active a {
     color: #FFF;
-    
     text-decoration: none;
-    
     background: #F90;
 }
-
-
-
-
 /*------------------------------------------------------------------
 [6. Masthead]
 */
-
 #seearm {
     position: relative;
-    
     height: 375px;
     margin-bottom: 2.5em;
-    
     -moz-box-shadow: 1px 1px 6px rgba(0,0,0,.5);    
     -webkit-box-shadow: 1px 1px 6px rgba(0,0,0,.5);
     box-shadow: 1px 1px 6px rgba(0,0,0,.5);
@@ -370,202 +302,138 @@ input {
     position: absolute;
     top: 0;
     right: 0;
-    
     width: 225px;
     height: 335px;
     padding: 20px;
-    
     color: #FFF;
-    
     background: #333;   
     background: rgba(0,0,0,.70);
-    
     text-shadow: 1px 1px 1px rgba(0,0,0,.4);
 }
-
 .seearm-details h2 {
     margin-bottom: .75em;
-    
     font-size: 28px;
 }
-
 .seearm-details p { 
     font-size: 14px;    
 }
-
 #seearm .carousel-control {
     top: 50%;
     left: -72px;
-    
-    line-height: 26px;
-    
+    line-height: 26px;  
     opacity: .35;
-    
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
 }
-
 #seearm .carousel-control:hover {
     opacity: .80;
 }
-
 #seearm .carousel-control.right {
     left: auto;
     right: -72px;
 }
 
-
-
-
 /*------------------------------------------------------------------
 [7. Page Title / #page-title]
 */
-
 #page-title {       
     padding: 30px 50px;
     margin: 0 -50px 2.5em;
-    
     border-top: 1px solid #EEE;
     border-bottom: 1px solid #EEE;
-    
     background: #EEE;
 }
-
 #page-title h1 {
     margin-bottom: .40em;
-    
     font-weight: 600;
 }
-
 #page-title p {
     margin-bottom: 0;
-    
     font-size: 15px;
 }
-
-
-
 
 /*------------------------------------------------------------------
 [8. Welcome]
 */
 #welcome h1 {
     padding: 0 80px;
-    
     color: #777;
-    
     font-size: 22px;
     font-style: italic;
     font-weight: 600;
     line-height: 1.75em;
 }
-
 #welcome {
-    
     text-align: center;
 }
-
-
-
-
 /*------------------------------------------------------------------
 [9. Content]
 */
 
-#content {
-    
+#content {   
 }
-
-
 
 /*------------------------------------------------------------------
 [10. Footer]
 */
 #footer {
     clear: both;
-    
     padding: 20px 50px;
     margin: 2.5em -50px 0;
-    
     color: #BBB;
-    
     background: #222;
-    
-    border-top: 1px solid #111;
-    
+    border-top: 1px solid #111;   
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
 }
-
 #footer .row {
     margin-bottom: 0;
 }
-
 #footer #footer-logo {      
     overflow: hidden;
-    
     width: 212px;
     height: 33px;
     margin-bottom: .75em;
-    
     line-height: 600px;
-    
-    background: url(../img/footer-logo.png) no-repeat 0 0;
+    background: url('footer-logo.png') no-repeat 0 0;
 }
-
 #footer a {
     color: #FFF;
 }
-
-
 
 /*------------------------------------------------------------------
 [11. Copyright]
 */
 #copyright {
     clear: both;
-    
     padding: 20px 50px 15px 50px;
     margin: 0 -50px;
-    
-    color: #777;
-    
+    color: #777;    
     font-size: 11px;
-    text-transform: uppercase;
-    
+/*    text-transform: uppercase; */
     background: #000;
-    
     border-top: 1px solid #000;
-    
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
 #copyright #rights {
-    
 }
-
 #copyright #totop {
     text-align: right;
 }
-
 #copyright a {
     color: #FFF;
 }
 
-
-
-
 /*------------------------------------------------------------------
 [12. Grid]
 */
-
 [class^="grid-"] {
     float: left;
-    
     margin: 0 0 0 20px;
 }
 
@@ -582,7 +450,6 @@ input {
 .grid-11 { width: 805px; }
 .grid-12 { width: 880px; }
 
-
 .append-12 { padding-right: 900px; }
 .append-11 { padding-right: 825px; }
 .append-10 { padding-right: 750px; }
@@ -595,7 +462,6 @@ input {
 .append-3 { padding-right: 225px; }
 .append-2 { padding-right: 150px; }
 .append-1 { padding-right: 75px; }
-
 
 .prepend-12 { padding-left: 900px; }
 .prepend-11 { padding-left: 825px; }
@@ -643,63 +509,46 @@ input {
 
 .slash {
     padding-right: .25em;
-    
     color: #F90;
 }
-
-
 .social-icons-container {
     width: 100%;
     display: table;
     padding: 0;
     margin: 2.5em 0 0;
-    
     list-style: none;
 }
-
 .social-icons-container li {
     width: 33%;
-    display: table-cell;    
-    
-    text-align: center;         
+    display: table-cell;
+    text-align: center;
 }
-
 .social-icon {
     width: 50px;
     height: 50px;
     display: inline-block;
-    overflow: hidden;   
-    
+    overflow: hidden;
     line-height: 600px;
-    
-    background: url(../img/social/social-sprite.png) no-repeat 0 0;                 
+    background: url('social-sprite.png') no-repeat 0 0;
 }
-
-.social-icon-twitter {
-    background-position: 0 0;                   
+.social-icon-weibo {
+    background-position: 0 0;
 }
-
-.social-icon-twitter:hover {
-    background-position: 0 -50px;                   
+.social-icon-weibo:hover {
+    background-position: 0 -50px;
 }
-
-.social-icon-googleplus {
+.social-icon-t-weibo {
     background-position: -50px 0;
 }
-
-.social-icon-googleplus:hover {
+.social-icon-t-weibo:hover {
     background-position: -50px -50px;
 }
-
 .social-icon-facebook {
-    background-position: -100px 0;  
+    background-position: -100px 0;
 }
-
 .social-icon-facebook:hover {
-    background-position: -100px -50px;  
+    background-position: -100px -50px;
 }
-
-
 .clearfix,
 .row { zoom: 1; }
 .clearfix:before,
@@ -707,4 +556,15 @@ input {
 .clearfix:after,
 .row:after { content: ""; display: table; }
 .clearfix:after,
-.row:after { clear: both; }
+.row:after { clear: both;}
+
+/*
+[14]. Side Bar
+ */
+.sidebar {
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  width: 240px;
+}
