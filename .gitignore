@@ -24,5 +24,6 @@ chromedriver.log
 /public/img
 /public/img/*
 /public/uploads/*
+database.online.yml
 config/database.yml
 manifest.yml
