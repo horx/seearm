@@ -2,9 +2,6 @@ source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.12'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'mysql2'
 
 # Gems used only for assets and not required
@@ -27,8 +24,6 @@ gem 'rails_kindeditor', '~> 0.3.12'
 # 表单
 gem 'simple_form'
 gem 'jquery-rails'
-#在APPFOG测试用
-#gem 'cloudfoundry-jquery-rails'
 # 分页
 gem 'will_paginate', '~> 3.0.4'
 # 分享功能
@@ -45,12 +40,7 @@ gem "bootstrap_helper", "~> 2.1.2.1"
 # gem 'jbuilder'
 
 group :production do
-# Use unicorn as the app server
   gem 'unicorn'
 end
 
-# Deploy with Capistrano
 gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
