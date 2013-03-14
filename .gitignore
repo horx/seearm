@@ -19,6 +19,8 @@ tags
 chromedriver.log
 .gitkeep
 # Ignore all logfiles and tempfiles.
+
+.idea
 /log/*.log
 /tmp
 /public/uploads/*
