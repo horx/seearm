@@ -21,8 +21,6 @@ chromedriver.log
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public/img
-/public/img/*
 /public/uploads/*
 database.online.yml
 config/database.yml
