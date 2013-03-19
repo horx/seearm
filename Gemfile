@@ -1,6 +1,10 @@
 source 'http://ruby.taobao.org'
 
+<<<<<<< HEAD
 gem 'rails', '3.2.13'
+=======
+gem 'rails', '3.2.12'
+>>>>>>> 5d422901182d0031a1a97a7d6e168a2fc37e641b
 
 gem 'mysql2'
 
