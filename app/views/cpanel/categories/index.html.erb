@@ -7,7 +7,6 @@
   <tr class="head">
     <td class="first">分类ID</td>
     <td>分类名称</td>
-    <td>缩略名</td>
     <td>描述</td>
     <td class="opts">操作</td>
   </tr>
@@ -15,8 +14,7 @@
 <% @categories.each do |cat| %>
   <tr>
     <td class="first"><%= cat.id %></td>
-    <td><%= cat.name %></td>
-    <td><%= cat.slug %></td>
+    <td><%= link_to cat.name, categories_details_path(cat.slug), target: "blank" %></td>
     <td><%= cat.desc %></td>
     <td>
       <%= link_to "编辑", edit_cpanel_category_path(cat.id), :class => "icon small_edit" %>
