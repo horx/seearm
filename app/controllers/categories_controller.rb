@@ -1,6 +1,6 @@
 # coding: utf-8
 class CategoriesController < ApplicationController
-  #before_filter :find_category, :only => [:show]
+  before_filter :find_category, :only => [:show]
 
   def index
     @categories = Category.all
