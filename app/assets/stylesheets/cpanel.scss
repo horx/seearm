@@ -189,10 +189,7 @@ form {
   &.form-full-width {
     .uneditable-input,
     select,
-    textarea,
-    input {
-      @include input-block-level;
-    }
+    textarea
     /* override radio and checkbox */
     input[type="radio"],
     input[type="checkbox"] {
@@ -202,10 +199,6 @@ form {
     }
     .btn {
       @extend .btn-block;
-    }
-    .input-large {
-      min-height: $baseLineHeight * 2;
-      height: $baseLineHeight * 2;
     }
     .btn-large {
       padding: 9px 19px; // http://git.io/D9i_5g
@@ -222,26 +215,6 @@ form {
   margin-right: 5px;
 }
 
-.compound_datetime {
-  @include clearfix;
-  .date {
-    float: left;
-  }
-  .time {
-    float: left;
-    margin-left: 15px;
-  }
-  .datepicker {
-    width: 6em;
-  }
-  .timepicker {
-    width: 6em;
-    margin-top: 1px;
-  }
-  .add-on {
-    margin-top: 1px;
-  }
-}
 
 .uploadable-input {
   margin: 0;
@@ -298,6 +271,5 @@ form {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
     outline: thin dotted \9;
-    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6));
   }
 }
