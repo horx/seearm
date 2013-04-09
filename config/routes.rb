@@ -5,7 +5,7 @@ Seearm::Application.routes.draw do
     resources :categories
     resources :products
 
-    resources :images, to: "images#create", :via => [:post, :put]
+    resources :images
   end
 
   match "products", :to => "products#index", :as => :products_lists
