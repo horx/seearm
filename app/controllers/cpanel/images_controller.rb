@@ -1,9 +1,5 @@
 class Cpanel::ImagesController < Cpanel::ApplicationController
 
-
-  def new
-
-  end
   def create
     files = params[:files].map do |file|
       photo = product.create :image => file
