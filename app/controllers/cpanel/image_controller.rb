@@ -1,4 +1,4 @@
-class ImageController < ApplicationController
+class ImagesController < ApplicationController
   def create
     files = params[:files].map do |file|
       photo = product.create :image => file

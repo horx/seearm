@@ -4,10 +4,13 @@ Seearm::Application.routes.draw do
     root :to => "home#index"
     resources :categories
     resources :products
+
+    match '/images', to: "images#create", :via => [:post, :put]
   end
 
   match "products", :to => "products#index", :as => :products_lists
   match "products/:id", :to => "products#show", :as => :products_details
+
   root :to => "home#index"
 
   match "categories", :to => "categories#index", :as => :categories_lists
