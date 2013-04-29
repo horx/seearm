@@ -17,6 +17,8 @@ end
 #上传组件
 gem "carrierwave", "~> 0.8.0"
 gem "mini_magick", "~> 3.5"
+gem 'rest-client'
+gem 'carrierwave-aliyun'
 #Kindeditor
 #gem 'rails_kindeditor', '~> 0.3.12'
 # 表单
