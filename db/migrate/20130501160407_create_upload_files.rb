@@ -1,6 +1,6 @@
-class CreateFiles < ActiveRecord::Migration
+class CreateUploadFiles < ActiveRecord::Migration
   def change
-    create_table :files do |t|
+    create_table :upload_files do |t|
       t.string   :file_name
       t.integer  :file_size
       t.integer  :user_id
