@@ -14,7 +14,7 @@
         <%= render "editor_toolbar" %>
       </div>
     </div>
-      <%= f.input :content, :as => :text, :input_html => { :class => "topic_editor closewarning xxlarge", :style => "height:400px" }%>
+      <%= f.input :content, :as => :text, :input_html => { :class => "product_editor closewarning xxlarge", :style => "height:400px" }%>
       <div class="form-actions">
       <%= f.submit t("cpanel.common.save"), :class => "btn btn-primary", 'data-disable-with' => t("cpanel.common.saving") %>
       or
@@ -23,3 +23,43 @@
   </fieldset>
 <% end %>
 </div>
+<script type="text/javascript">
+    (function() {
+        var opts;
+        $("#product_add_image").bind("click", function() {
+            $("#product_upload_images").click();
+            return false;
+        });
+        opts = {
+            url: "/cpanel/images",
+            type: "POST",
+            beforeSend: function() {
+                $("#product_add_image").hide();
+                return $("#product_add_image").before("<span class='loading'>上传中...</span>");
+            },
+            success: function(result, status, xhr) {
+                $("#product_add_image").parent().find("span").remove();
+                $("#product_add_image").show();
+                return appendImageFromUpload([result]);
+            }
+        };
+        $("#product_upload_images").fileUpload(opts);
+        return false;
+    });
+
+    function appendImageFromUpload(srcs) {
+        var before_text, caret_pos, source, src, src_merged, txtBox, _i, _len;
+        txtBox = $(".product_editor");
+        caret_pos = txtBox.caretPos();
+        src_merged = "";
+        for (_i = 0, _len = srcs.length; _i < _len; _i++) {
+            src = srcs[_i];
+            src_merged = "![](" + src + ")\n";
+        }
+        source = txtBox.val();
+        before_text = source.slice(0, caret_pos);
+        txtBox.val(before_text + src_merged + source.slice(caret_pos + 1, source.count));
+        txtBox.caretPos(caret_pos + src_merged.length);
+        return txtBox.focus();
+    };
+</script>
