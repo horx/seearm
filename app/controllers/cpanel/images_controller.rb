@@ -1,7 +1,8 @@
-class ImageController < ApplicationController
+class Cpanel::ImagesController < Cpanel::ApplicationController
+
   def create
     files = params[:files].map do |file|
-      photo = product.create :image => file
+      photo = Product.create :image => file
       image_url = photo.image_url
       image_name = File.basename(image_url, File.extname(image_url))
       { :name => image_name, :url =>  photo.image_url(:normal) }
