@@ -14,7 +14,6 @@ public/uploads/**/*
 *.swp
 *.swo
 .rvmrc
-vendor/*
 tags
 chromedriver.log
 .gitkeep

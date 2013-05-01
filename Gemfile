@@ -10,7 +10,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem "anjlab-bootstrap-rails", "~> 2.3.0.0", :require => 'bootstrap-rails'
-  gem 'jquery-fileupload-rails'
+  gem "jquery-atwho-rails", "0.1.6"
   gem 'uglifier', '>= 1.3.0'
 end
 

@@ -24,12 +24,13 @@
 <% end %>
 </div>
 <script type="text/javascript">
-    (function() {
+    $(function() {
         var opts;
         $("#product_add_image").bind("click", function() {
             $("#product_upload_images").click();
             return false;
         });
+
         opts = {
             url: "/cpanel/images",
             type: "POST",

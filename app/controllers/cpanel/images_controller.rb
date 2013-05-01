@@ -1,12 +1,11 @@
 class Cpanel::ImagesController < Cpanel::ApplicationController
 
   def create
-    files = params[:files].map do |file|
-      photo = Product.create :image => file
-      image_url = photo.image_url
-      image_name = File.basename(image_url, File.extname(image_url))
-      { :name => image_name, :url =>  photo.image_url(:normal) }
-    end
-    render json: {files: files}
+    # 浮动窗口上传
+    @image = File.new
+    @image.image = params[:Filedata]
+    @image.user_id = 1
+    @image.save
+    render :text => @image.image.url
   end
 end

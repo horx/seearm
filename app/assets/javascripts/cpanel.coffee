@@ -1,6 +1,5 @@
 #= require jquery
 #= require jquery_ujs
-#= require jquery-fileupload/basic
 #= require twitter/bootstrap/transition
 #= require twitter/bootstrap/alert
 #= require twitter/bootstrap/modal
@@ -8,5 +7,6 @@
 #= require twitter/bootstrap/tab
 #= require twitter/bootstrap/tooltip
 #= require twitter/bootstrap/button
+#= require jquery.html5-fileupload
 #= require will_paginate
 #= require_self
