@@ -48,8 +48,8 @@ module Redcarpet
       end
     end
 
-    class HTMLwithProduct < HTMLwithSyntaxHighlight
-      # Product 里面，所有的 head 改为 h4 显示
+    class HTMLwithTopic < HTMLwithSyntaxHighlight
+      # Topic 里面，所有的 head 改为 h4 显示
       def header(text, header_level)
         "<h4>#{text}</h4>"
       end
@@ -78,7 +78,7 @@ class MarkdownConverter
   end
 end
 
-class MarkdownProductConverter < MarkdownConverter
+class MarkdownTopicConverter < MarkdownConverter
   def self.format(raw)
     self.instance.format(raw)
   end
@@ -102,7 +102,7 @@ class MarkdownProductConverter < MarkdownConverter
 
     return doc.to_html.strip
   rescue => e
-    puts "MarkdownProductConverter.format ERROR: #{e}"
+    puts "MarkdownTopicConverter.format ERROR: #{e}"
     return text
   end
 
@@ -215,7 +215,7 @@ class MarkdownProductConverter < MarkdownConverter
   end
 
   def initialize
-    @converter = Redcarpet::Markdown.new(Redcarpet::Render::HTMLwithProduct.new, {
+    @converter = Redcarpet::Markdown.new(Redcarpet::Render::HTMLwithTopic.new, {
         :autolink => true,
         :fenced_code_blocks => true,
         :strikethrough => true,

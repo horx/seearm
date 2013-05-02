@@ -14,6 +14,23 @@ module ApplicationHelper
     flash_messages.join("\n").html_safe
   end
 
+  def controller_stylesheet_link_tag
+    case controller_name
+    when "users","home", "topics", "pages", "search", "sites", "notifications", "notes"
+      stylesheet_link_tag controller_name
+    when "replies"
+      stylesheet_link_tag "topics"
+    end
+  end
+
+  def controller_javascript_include_tag
+    case controller_name
+    when "pages","topics","sites", "notifications", "notes"
+      javascript_include_tag controller_name
+    when "replies"
+      javascript_include_tag "topics"
+    end
+  end
 
   def markdown(str, options = {})
     # XXX: the renderer instance should be a class variable
@@ -23,50 +40,37 @@ module ApplicationHelper
     assembler = Redcarpet::Render::HTML.new(:hard_wrap => options[:hard_wrap]) # auto <br> in <p>
 
     renderer = Redcarpet::Markdown.new(assembler, {
-        :autolink => true,
-        :fenced_code_blocks => true
+      :autolink => true,
+      :fenced_code_blocks => true
     })
     content_tag(:div, raw(MarkdownConverter.convert(str)), :class => options[:class])
   end
 
-  class MarkdownConverter
-    include Singleton
-
-    def self.convert(text)
-      self.instance.convert(text)
-    end
-
-    def convert(text)
-      @converter.render(text)
-    end
-
-    private
-    def initialize
-      @converter = Redcarpet::Markdown.new(Redcarpet::Render::HTMLwithSyntaxHighlight.new, {
-          :autolink => true,
-          :fenced_code_blocks => true,
-          :no_intra_emphasis => true
-      })
-    end
+  def admin?(user = nil)
+    user ||= current_user
+    user.try(:admin?)
   end
 
-  def markdowns(text)
-    options = {
-        :autolink => true,
-        :space_after_headers => true,
-        :fenced_code_blocks => true,
-        :no_intra_emphasis => true,
-        :hard_wrap => true,
-        :strikethrough =>true
-    }
-    markdown = Redcarpet::Markdown.new(HTMLwithCodeRay,options)
-    markdown.render(h(text)).html_safe
+  def wiki_editor?(user = nil)
+    user ||= current_user
+    user.try(:wiki_editor?)
   end
 
-  class HTMLwithCodeRay < Redcarpet::Render::HTML
-    def block_code(code, language)
-      CodeRay.scan(code, language).div(:tab_width=>2)
-    end
+  def owner?(item)
+    return false if item.blank? or current_user.blank?
+    item.user_id == current_user.id
+  end
+
+  def timeago(time, options = {})
+    options[:class]
+    options[:class] = options[:class].blank? ? "timeago" : [options[:class],"timeago"].join(" ")
+    content_tag(:abbr, "", options.merge(:title => time.iso8601)) if time
+  end
+
+  def render_page_title
+    site_name = Setting.app_name
+    title = @page_title ? "#{site_name} | #{@page_title}" : site_name rescue "SITE_NAME"
+    content_tag("title", title, nil, false)
   end
 
   # 去除区域里面的内容的换行标记
@@ -82,10 +86,10 @@ module ApplicationHelper
   end
 
   MOBILE_USER_AGENTS =  'palm|blackberry|nokia|phone|midp|mobi|symbian|chtml|ericsson|minimo|' +
-      'audiovox|motorola|samsung|telit|upg1|windows ce|ucweb|astel|plucker|' +
-      'x320|x240|j2me|sgh|portable|sprint|docomo|kddi|softbank|android|mmp|' +
-      'pdxgw|netfront|xiino|vodafone|portalmmm|sagem|mot-|sie-|ipod|up\\.b|' +
-      'webos|amoi|novarra|cdm|alcatel|pocket|iphone|mobileexplorer|mobile'
+                        'audiovox|motorola|samsung|telit|upg1|windows ce|ucweb|astel|plucker|' +
+                        'x320|x240|j2me|sgh|portable|sprint|docomo|kddi|softbank|android|mmp|' +
+                        'pdxgw|netfront|xiino|vodafone|portalmmm|sagem|mot-|sie-|ipod|up\\.b|' +
+                        'webos|amoi|novarra|cdm|alcatel|pocket|iphone|mobileexplorer|mobile'
   def mobile?
     agent_str = request.user_agent.to_s.downcase
     return false if agent_str =~ /ipad/
