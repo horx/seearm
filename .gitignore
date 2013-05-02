@@ -25,5 +25,5 @@ chromedriver.log
 /public/uploads/*
 database.online.yml
 config/database.yml
-config/initializes/carrierwave.rb
+config/initializers/carrierwave.rb
 manifest.yml
