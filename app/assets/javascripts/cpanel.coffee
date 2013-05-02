@@ -1,5 +1,6 @@
 #= require jquery
 #= require jquery_ujs
+#= require jquery.atwho
 #= require twitter/bootstrap/transition
 #= require twitter/bootstrap/alert
 #= require twitter/bootstrap/modal

@@ -1,6 +1,7 @@
 # coding: utf-8
 class Cpanel::ProductsController < Cpanel::ApplicationController
   before_filter :find_product, :only => [ :edit, :update, :destroy]
+
   def index
   	@products = Product.paginate( :page => params[:page], :per_page => 15 )
   end

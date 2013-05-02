@@ -9,14 +9,14 @@ gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
-  gem "anjlab-bootstrap-rails", "~> 2.3.0.0", :require => 'bootstrap-rails'
-  gem "jquery-atwho-rails", "0.1.6"
+  gem 'anjlab-bootstrap-rails', '~> 2.3.0.0', :require => 'bootstrap-rails'
+  gem 'jquery-atwho-rails', '0.1.6'
   gem 'uglifier', '>= 1.3.0'
 end
 
 #上传组件
-gem "carrierwave", "~> 0.8.0"
-gem "mini_magick", "~> 3.5"
+gem 'carrierwave', '~> 0.8.0'
+gem 'mini_magick', '~> 3.5'
 gem 'rest-client'
 gem 'carrierwave-aliyun'
 #Kindeditor
@@ -27,17 +27,18 @@ gem 'jquery-rails'
 # 分页
 gem 'will_paginate', '~> 3.0.4'
 # 分享功能
-gem "social-share-button"
+gem 'social-share-button'
 # Bootstrap
 gem 'bootstrap-will_paginate', '~> 0.0.9'
-gem "bootstrap_helper", "~> 2.1.2.1"
+gem 'bootstrap_helper', '~> 2.1.2.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
+# Markdown 格式
+gem 'redcarpet'
+gem 'rouge', '~> 0.3.2'
+gem 'nokogiri', '~> 1.5.6'
 group :production do
   gem 'unicorn'
 end

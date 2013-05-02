@@ -8,6 +8,7 @@ class CreateProducts < ActiveRecord::Migration
       t.boolean :status
       t.string :keywords
       t.text :content
+      t.text :content_html
 
       t.timestamps
     end
