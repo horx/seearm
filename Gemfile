@@ -45,6 +45,5 @@ gem 'bootstrap_helper', '~> 2.1.2.1'
 
 group :production do
   gem 'unicorn'
+  gem 'capistrano'
 end
-
-gem 'capistrano'
