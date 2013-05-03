@@ -3,7 +3,7 @@ require "bundler/capistrano"
 server "new.seearm.com", :web, :app, :db, primary: true
 
 set :application, "seearm"
-set :user, "see-app"
+set :user, "seeapp"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false

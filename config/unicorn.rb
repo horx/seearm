@@ -1,4 +1,4 @@
-root = "/home/see-app/apps/seearm/current"
+root = "/home/seeapp/apps/seearm/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
