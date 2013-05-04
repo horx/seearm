@@ -16,32 +16,38 @@ ActiveRecord::Schema.define(:version => 20130501160407) do
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.string   "slug"
-    t.boolean  "type"
+    t.integer  "pid",        :default => 0
+    t.boolean  "ctype",      :default => true
     t.text     "desc"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
+
+  add_index "categories", ["slug"], :name => "category_slug"
 
   create_table "products", :force => true do |t|
     t.string   "name"
     t.string   "pictures"
     t.integer  "category_id"
     t.decimal  "price",        :precision => 10, :scale => 0
-    t.boolean  "status"
+    t.boolean  "status",                                      :default => false
+    t.string   "taobao_url",                                  :default => "http://seearm.taobao.com"
     t.string   "keywords"
     t.text     "content"
     t.text     "content_html"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                                                          :null => false
+    t.datetime "updated_at",                                                                          :null => false
   end
+
+  add_index "products", ["category_id"], :name => "product_category"
 
   create_table "upload_files", :force => true do |t|
     t.string   "file_name"
     t.integer  "file_size"
     t.integer  "user_id"
-    t.boolean  "type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.boolean  "type",       :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
 end
