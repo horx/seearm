@@ -27,3 +27,4 @@ database.online.yml
 config/database.yml
 config/initializers/carrierwave.rb
 manifest.yml
+public/UPload/
