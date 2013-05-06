@@ -9,10 +9,6 @@ class BaseUploader < CarrierWave::Uploader::Base
     "#{model.class.to_s.underscore}"
   end
 
-  # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url
-    "photo/#{version_name}.jpg"
-  end
 
   def filename
     if super.present?

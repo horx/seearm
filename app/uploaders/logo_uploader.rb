@@ -1,5 +1,8 @@
 # coding: utf-8
 class LogoUploader < BaseUploader
+  def store_dir
+    "images/"
+  end
   version :normal do
     process :resize_to_fill => [240, 240]
   end

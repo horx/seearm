@@ -9,8 +9,9 @@
                     <span class="slash"></span>
                     产品图片
                 </h2>
+              <%= @product.pictures %>
                 <div class="thumbnail">
-                    <img src="<%= @product.pictures %>" alt="<%= @product.name %>">
+                  <%= image_tag @product.pictures %>
                 </div>
 
             </div>
