@@ -1,25 +1,36 @@
-    <div id="page-title">
-		
-		<h2><%= @category.name %></h2>
-		<p><%= @category.desc %></p>
-		
-	</div> <!-- /page-title -->
-	
-	<div id="content">
-		<div class="container">
-			<div class="row">
-			<% @products.each do |product| %>
-				<div class="grid-4">	
-					<div class="product-detail">
-						<h4><%= link_to product.name,products_details_path(product.id),target: "blank" %></h4>
-						<p class="thumbnail"><img src="<%= product.pictures%>" alt="<%= product.name%>"></p>
-						<p class="product-detail-title"><%= link_to product.name,products_details_path(product.id),target: "blank" %></p>
-						<p><%= raw(product.content.truncate(135)) %><%= link_to t("front.products.products_detail"),products_details_path(product.id),target: "blank" %></p>
-						
-					</div> <!-- /profile -->
-				</div> <!-- /grid-4 -->
-			<% end %>
-			</div> <!-- /row -->
-			
-		</div> <!-- /container -->
-	</div> <!-- /content -->
+<div id="page-title">
+
+  <h2><%= @category.name %></h2>
+
+  <p><%= @category.desc %></p>
+
+</div>
+
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="grid-4">
+        <%= render 'left' %>
+      </div>
+
+      <% @products.each do |product| %>
+          <div class="grid-4">
+            <div class="product-detail">
+              <h4><%= link_to product.name, products_details_path(product.id), target: "blank" %></h4>
+
+              <p class="thumbnail"><img src="<%= product.pictures %>" alt="<%= product.name %>"></p>
+
+              <p class="product-detail-title"><%= link_to product.name, products_details_path(product.id), target: "blank" %></p>
+
+              <p><%= raw(strip_tags(product.content).truncate(135)) %><%= link_to t("front.products.products_detail"), products_details_path(product.id), target: "blank" %></p>
+
+            </div>
+            <!-- /product -->
+          </div>
+          <!-- /grid-4 -->
+      <% end %>
+
+    </div>
+
+  </div>
+</div>

@@ -3,12 +3,13 @@ class CategoriesController < ApplicationController
   before_filter :find_category, :only => [:show]
 
   def index
-    @categories = Category.all
+    @categories = Category.find_all_by_ctype(1)
   end
 
   def show
     find_category
     @products = Product.where(:category_id => @category.id)
+    @categories = Category.find_all_by_ctype(1)
     #@products = Product.find_products_by_category_id(@category['id'])
   end
 
