@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_filter :find_category, :only => [:show]
 
   def index
-    @categories = Category.find_all
+    @categories = Category.find_all_by_ctype(1)
   end
 
   def show
