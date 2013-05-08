@@ -1,3 +1,7 @@
+before_exec do |server|
+  ENV["BUNDLE_GEMFILE"] = "/home/seeapp/apps/seearm/currentGemfile"
+end
+
 root = "/home/seeapp/apps/seearm/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
