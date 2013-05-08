@@ -4,8 +4,6 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
@@ -26,6 +24,7 @@ gem 'carrierwave', '~> 0.8.0'
 gem 'mini_magick', '~> 3.5'
 gem 'rest-client'
 gem 'carrierwave-aliyun'
+
 #Kindeditor
 #gem 'rails_kindeditor', '~> 0.3.12'
 # 表单
