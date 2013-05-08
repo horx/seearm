@@ -12,7 +12,7 @@
       <div class="grid-4">
         <%= render 'left' %>
       </div>
-
+      <div class="grid-8">
       <% @products.each do |product| %>
           <div class="grid-4">
             <div class="product-detail">
@@ -22,13 +22,16 @@
 
               <p class="product-detail-title"><%= link_to product.name, products_details_path(product.id), target: "blank" %></p>
 
+              <!--
               <p><%= raw(strip_tags(product.content).truncate(135)) %><%= link_to t("front.products.products_detail"), products_details_path(product.id), target: "blank" %></p>
+              -->
 
             </div>
             <!-- /product -->
           </div>
           <!-- /grid-4 -->
       <% end %>
+      </div>
 
     </div>
 
