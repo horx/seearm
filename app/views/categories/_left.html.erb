@@ -5,7 +5,7 @@
           <% if category.pid == 0 %>
               <li class="nav-header"><%= category.name %></li>
           <% else %>
-              <li><%= link_to category.name, categories_details_path(category.slug.downcase), target: "blank" %></li>
+              <li><%= link_to category.name, categories_details_path(category.slug.downcase), target: "_blank" %></li>
           <% end %>
       <% end %>
     </ul>
