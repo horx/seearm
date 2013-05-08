@@ -1,3 +1,9 @@
+<div id="page-title">
+  <h2><%= @product.name %></h2>
+  <p></p>
+</div>
+
+
 <div id="content">
     <div class="container">
 
@@ -24,22 +30,23 @@
                     产品信息
                 </h2>
                 <div class="product-right">
-                    <p> <strong>产品名称:</strong>
-                    </p>
-                    <p> <strong>产品类别:</strong>
+                    <p> <strong>产品名称: </strong><%= @product.name %></p>
+                    <p> <strong>产品类别: </strong><%= @product.category.name %></p>
+                    <p>
+                        <strong>产　　商: </strong>
                     </p>
                     <p>
-                        <strong>产　　商:</strong>
+                        <strong>价　　格: </strong><%= @product.price %>
                     </p>
                     <p>
-                        <strong>价　　格:</strong>
+                        <strong>购买方式: </strong><%= link_to "淘宝购买",@product.taobao_url, target:"_blank" %>
                     </p>
-                    <p>
-                        <strong>购买方式:</strong>
-                    </p>
+                    <!--
                     <p>
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
+
+                    -->
                 </div>
             </div>
             <!-- /grid-7 --> 
