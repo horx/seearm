@@ -1,5 +1,7 @@
 Seearm::Application.routes.draw do
 
+  devise_for :users
+
   namespace :cpanel do
     root :to => "home#index"
     resources :categories

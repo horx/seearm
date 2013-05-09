@@ -42,6 +42,7 @@ gem 'bootstrap_helper', '~> 2.1.2.1'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'devise'
+gem 'devise-encryptable'
 
 group :production do
   gem 'unicorn'
