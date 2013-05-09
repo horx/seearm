@@ -41,6 +41,7 @@ gem 'bootstrap_helper', '~> 2.1.2.1'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'devise'
 
 group :production do
   gem 'unicorn'
