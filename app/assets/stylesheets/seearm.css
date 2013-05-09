@@ -440,11 +440,11 @@ input {
 .grid-1 { width: 55px; }
 .grid-2 { width: 130px; }
 .grid-3 { width: 205px; }
-.grid-4 { width: 280px; }
+.grid-4 { width: 280px; float: left;}
 .grid-5 { width: 355px; }
 .grid-6 { width: 430px; }
 .grid-7 { width: 505px; }
-.grid-8 { width: 580px; }
+.grid-8 { width: 580px; float: left;}
 .grid-9 { width: 655px; }
 .grid-10 { width: 730px; }
 .grid-11 { width: 805px; }
@@ -556,7 +556,7 @@ input {
 .clearfix:after,
 .row:after { content: ""; display: table; }
 .clearfix:after,
-.row:after { clear: both;}
+.clear, .row:after { clear: both;}
 
 /*
 [14]. Side Bar
