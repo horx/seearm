@@ -1,17 +1,20 @@
-<div id="page-title">
-  <h2><%= @category.name %></h2>
-  <p><%= @category.desc %></p>
+<div>
+  <ul class="breadcrumb">
+  <li><a href="#">Home</a> <span class="divider">/</span></li>
+  <li><a href="#">Library</a> <span class="divider">/</span></li>
+  <li class="active">Data</li>
+</ul>
 </div>
 
 <div id="content">
   <div class="container">
     <div class="row">
-      <div class="grid-4">
+      <div class="grid-13">
         <%= render 'left' %>
       </div>
-      <div class="grid-8">
+      <div class="grid-14">
       <% @products.each do |product| %>
-          <div class="grid-4">
+          <div class="grid-15">
             <div class="product-detail">
               <h4><%= link_to product.name, products_details_path(product.id), target: "blank" %></h4>
 
@@ -27,7 +30,7 @@
             <!-- /product -->
           </div>
           <div class=""></div>
-          <!-- /grid-4 -->
+          <!-- /grid-15-->
       <% end %>
       </div>
 

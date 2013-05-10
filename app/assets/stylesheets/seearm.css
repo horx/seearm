@@ -97,7 +97,7 @@ input {
     width: 880px;
 }
 #nav {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
 #nav .container > #main-nav {
@@ -105,7 +105,9 @@ input {
     margin: 0;
     
     border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
 }
+
 
 #nav .container > #main-nav > li {
     position: relative;
@@ -157,6 +159,7 @@ input {
     
     border-top-color: #F90;
     border-top-width: 4px;
+
 }
 
 #nav .container > #main-nav > li > a > .caret {
@@ -440,15 +443,18 @@ input {
 .grid-1 { width: 55px; }
 .grid-2 { width: 130px; }
 .grid-3 { width: 205px; }
-.grid-4 { width: 280px; float: left;}
+.grid-4 { width: 280px; }
 .grid-5 { width: 355px; }
 .grid-6 { width: 430px; }
 .grid-7 { width: 505px; }
-.grid-8 { width: 580px; float: left;}
+.grid-8 { width: 580px; }
 .grid-9 { width: 655px; }
 .grid-10 { width: 730px; }
 .grid-11 { width: 805px; }
 .grid-12 { width: 880px; }
+.grid-13 { width: 240px; float: left; margin: 0 10px 0 0;}
+.grid-14 { width: 610px; float: left; }
+.grid-15 { width: 280px; float: left; margin: 0 10px;}
 
 .append-12 { padding-right: 900px; }
 .append-11 { padding-right: 825px; }
@@ -567,4 +573,23 @@ input {
   right: auto;
   top: 0;
   width: 240px;
+}
+
+.dropdown .dropdown-menu .nav-header {
+    padding-right:20px;
+}
+
+.nav-header {
+    display:block;
+    padding:3px 15px 3px 0;
+    font-size:14px;
+    font-weight:bold;
+    line-height:20px;
+    color:#444;
+    text-shadow:0 1px 0 rgba(255,255,255,0.5);
+    text-transform:uppercase
+}
+
+.breadcrumb {
+    background: #eeeeee
 }
