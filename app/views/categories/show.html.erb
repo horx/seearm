@@ -23,8 +23,8 @@
               <p class="product-detail-title">
                 <%= link_to product.name, products_details_path(product.id), target: "blank" %>
               </p>
-              <p style="height:140px;"><%= raw(strip_tags(product.content).truncate(120)) %>
-                <%= link_to t("front.products.products_detail"), products_details_path(product.id), target: "blank" %>
+              <p class="product-text"><%= raw(strip_tags(product.content).truncate(120)) %>
+                <%= link_to '产品详情>>', products_details_path(product.id), class: "product-more", target: "blank" %>
               </p>
             </div>
             <!-- /product -->
