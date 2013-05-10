@@ -97,7 +97,7 @@ input {
     width: 880px;
 }
 #nav {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
 #nav .container > #main-nav {
@@ -107,6 +107,7 @@ input {
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
 }
+
 
 #nav .container > #main-nav > li {
     position: relative;
@@ -120,7 +121,6 @@ input {
     list-style: none;
     
     border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
 }
 
 #nav .container > #main-nav > li:last-child {
@@ -140,7 +140,6 @@ input {
     text-transform: uppercase;
     
     border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
 }
 
 #nav .container > #main-nav > li > a:hover,
@@ -151,9 +150,6 @@ input {
     
     border-top-color: #333;
     border-top-width: 1px;
-
-    border-bottom-color: #333;
-    border-bottom-width: 1px;
 }
 
 #nav .container > #main-nav > li.active a {
@@ -592,4 +588,8 @@ input {
     color:#444;
     text-shadow:0 1px 0 rgba(255,255,255,0.5);
     text-transform:uppercase
+}
+
+.breadcrumb {
+    background: #eeeeee
 }
