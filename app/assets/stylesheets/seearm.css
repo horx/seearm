@@ -453,7 +453,7 @@ input {
 .grid-11 { width: 805px; }
 .grid-12 { width: 880px; }
 .grid-13 { width: 240px; float: left; margin: 0 10px 0 0;}
-.grid-14 { width: 620px; float: left; }
+.grid-14 { width: 600px; float: left; }
 .grid-15 { width: 280px;}
 
 .append-12 { padding-right: 900px; }
@@ -571,7 +571,7 @@ input {
   left: 0;
   right: auto;
   top: 0;
-  width: 240px;
+  width: 260px;
   float: left;
 }
 
