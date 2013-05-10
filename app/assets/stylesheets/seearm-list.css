@@ -1,7 +1,12 @@
 .product-detail {
 	text-align: center;
+	height: 480px;
+	margin-bottom: 20px;
 }
 
+.product-more {
+	float: right;
+}
 .product-detail img {
 	display: inline-block;
 	width: 240px;
@@ -13,6 +18,10 @@
 	margin-bottom: .85em;
 	
 	font-size: 18px;
+}
+
+.product-text {
+	text-align: left;
 }
 
 .product-detail .product-detail-title {
