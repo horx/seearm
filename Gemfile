@@ -39,7 +39,7 @@ gem 'bootstrap-will_paginate', '~> 0.0.9'
 gem 'bootstrap_helper', '~> 2.1.2.1'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.1'
 
 gem 'devise'
 gem 'devise-encryptable'
