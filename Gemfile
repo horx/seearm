@@ -42,7 +42,7 @@ gem 'bootstrap_helper', '~> 2.1.2.1'
 gem 'settingslogic', '~> 2.0.9'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.1'
+#gem 'bcrypt-ruby', '~> 3.0.1'
 
 gem 'devise'
 gem 'devise-encryptable'

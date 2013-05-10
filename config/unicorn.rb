@@ -1,5 +1,5 @@
 before_exec do |server|
-  ENV["BUNDLE_GEMFILE"] = "/home/seeapp/apps/seearm/currentGemfile"
+  ENV["BUNDLE_GEMFILE"] = "/home/seeapp/apps/seearm/current/Gemfile"
 end
 
 root = "/home/seeapp/apps/seearm/current"
