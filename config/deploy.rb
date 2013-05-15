@@ -29,7 +29,8 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.online.yml"), "#{shared_path}/config/database.yml"
-    put File.read("config/initializers/carrierwave.example.rb"), "#{shared_path}/config/initializers/carrierwave.rb"
+    put File.read("config/initializers/carrierwave.online.rb"), "#{shared_path}/config/initializers/carrierwave.rb"
+    put File.read("config/config.online.yml"), "#{shared_path}/config/config.yml"
     puts "Now edit the config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
@@ -37,6 +38,7 @@ namespace :deploy do
   task :symlink_config, roles: :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/initializers/carrierwave.rb #{release_path}/config/initializers/carrierwave.rb"
+    run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 
