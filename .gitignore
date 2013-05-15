@@ -22,6 +22,7 @@ chromedriver.log
 .idea
 /log/*.log
 /tmp
+vendor/bundle/
 /public/uploads/*
 database.online.yml
 config/database.yml

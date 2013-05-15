@@ -44,6 +44,8 @@ gem 'settingslogic', '~> 2.0.9'
 # To use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.1'
 
+gem 'json'
+
 gem 'devise'
 gem 'devise-encryptable'
 
