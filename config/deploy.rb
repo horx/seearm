@@ -39,6 +39,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/initializers/carrierwave.rb #{release_path}/config/initializers/carrierwave.rb"
     run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
+    run "ln -nfs #{release_path}/vendor/assets/stylesheets/font-awesome.css #{release_path}/public/assets/font-awesome.css"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 
