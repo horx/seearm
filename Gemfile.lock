@@ -198,6 +198,7 @@ DEPENDENCIES
   devise-encryptable
   jquery-atwho-rails (= 0.1.6)
   jquery-rails
+  json
   md_emoji
   meta_request
   mini_magick (~> 3.5)
