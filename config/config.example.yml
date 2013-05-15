@@ -13,7 +13,7 @@ defaults: &defaults
   email_server: "smtp.google.com"
   email_sender: 'dev-test@seearm.com'
   email_password: 'test123456'
-  weibo: "ruby_china"
+  weibo: "seearm"
 
 development:
   <<: *defaults
