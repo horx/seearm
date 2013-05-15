@@ -10,6 +10,19 @@ class ApplicationController < ActionController::Base
     render_optional_error_file(403)
   end
 
+  def require_user
+    if current_user.blank?
+      respond_to do |format|
+        format.html  {
+          authenticate_user!
+        }
+        format.all {
+          head(:unauthorized)
+        }
+      end
+    end
+  end
+
   def render_optional_error_file(status_code)
     status = status_code.to_s
     if ["404","403", "422", "500"].include?(status)

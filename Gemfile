@@ -38,6 +38,9 @@ gem 'social-share-button'
 gem 'bootstrap-will_paginate', '~> 0.0.9'
 gem 'bootstrap_helper', '~> 2.1.2.1'
 
+# YAML 配置信息
+gem 'settingslogic', '~> 2.0.9'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
