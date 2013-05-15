@@ -4,7 +4,7 @@ defaults: &defaults
   domain: "127.0.0.1:3000"
   admin_emails:
     - "hanhor.wu@gmail.com"
-    - "tenpads@gmail.com"
+    - "xxx@gmail.com"
 
   upload_url: "http://ruby-china-files-dev.b0.upaiyun.com"
   upyun_username: "test"
