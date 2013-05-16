@@ -50,9 +50,9 @@ gem 'devise'
 gem 'devise-encryptable'
 
 group :development do
-  #gem 'better_errors'
-  #gem 'binding_of_caller'
-  #gem 'meta_request'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 group :production do
