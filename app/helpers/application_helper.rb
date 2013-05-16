@@ -15,10 +15,7 @@ module ApplicationHelper
   end
 
   # user helpers
-  def current_user
-    token = params[:token] || oauth_token
-    @current_user ||= User.where(:private_token => token).first
-  end
+
 
   def controller_stylesheet_link_tag
     case controller_name
