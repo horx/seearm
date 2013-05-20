@@ -9,5 +9,7 @@
 #= require twitter/bootstrap/tooltip
 #= require twitter/bootstrap/button
 #= require jquery.html5-fileupload
+#= require twitter/bootstrap
+#= require bootstrap-wysiwyg
 #= require will_paginate
 #= require_self

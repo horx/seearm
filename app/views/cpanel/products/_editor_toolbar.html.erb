@@ -8,3 +8,11 @@
     <li class="preview"><%= link_to("预览", "#") %></li>
   </ul>
 </div>
+
+<textarea id="some-textarea" class='wysihtml5' placeholder="Enter text ..."></textarea>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.wysihtml5').wysiwyg();
+    });
+</script>

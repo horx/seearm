@@ -25,6 +25,8 @@ gem 'mini_magick', '~> 3.5'
 gem 'rest-client'
 gem 'carrierwave-aliyun'
 
+gem "bootstrap-wysiwyg-rails", "~> 0.3.1"
+
 #Kindeditor
 #gem 'rails_kindeditor', '~> 0.3.12'
 # 表单
