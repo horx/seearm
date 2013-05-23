@@ -3,5 +3,7 @@ class Category < ActiveRecord::Base
   validates_presence_of :name, :slug, :desc
   validates_uniqueness_of :name, :slug
 
+  default_scope order:  'id desc'
+
   has_many :products
 end

@@ -19,6 +19,9 @@ gem 'nokogiri', '~> 1.5.6'
 gem 'rails_autolink', '>= 1.0.9'
 gem 'md_emoji'
 
+# Covert html to markdown
+gem 'reverse_markdown'
+
 #上传组件
 gem 'carrierwave', '~> 0.8.0'
 gem 'mini_magick', '~> 3.5'

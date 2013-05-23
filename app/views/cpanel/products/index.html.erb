@@ -20,8 +20,8 @@
       <td><%= product.price %></td>
       <td><%= product.status %></td>
       <td>
-        <%= link_to t("cpanel.common.edit"), edit_cpanel_product_path(product.id), :class => "icon small_edit" %>
-        <%= link_to t("cpanel.common.delete"), cpanel_product_path(product.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+        <%= link_to '', edit_cpanel_product_path(product.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= link_to '', cpanel_product_path(product.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
       </td>
     </tr>
     <% end %>

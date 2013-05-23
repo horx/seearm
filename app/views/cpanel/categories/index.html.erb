@@ -17,12 +17,14 @@
     <td><%= link_to cat.name, categories_details_path(cat.slug), target: "blank" %></td>
     <td><%= cat.desc %></td>
     <td>
-      <%= link_to "编辑", edit_cpanel_category_path(cat.id), :class => "icon small_edit" %>
-      <%= link_to "删除", cpanel_category_path(cat.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+      <%= link_to '', edit_cpanel_category_path(cat.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to '', cpanel_category_path(cat.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
     </td>
   </tr>
 <% end %>
 </table>
 <br />
+
+<%= will_paginate @categories %>
 
 <a href="<%= new_cpanel_category_path %>" class="btn btn-small btn-success"><%= t("cpanel.common.create") %></a>
