@@ -2,8 +2,6 @@
 class Cpanel::ProductsController < Cpanel::ApplicationController
   before_filter :find_product, :only => [ :edit, :update, :destroy]
 
-  delegate "markdown", :to => "ActionController::Base.helpers"
-
   def index
   	@products = Product.paginate( :page => params[:page], :per_page => 15 )
   end
@@ -14,7 +12,6 @@ class Cpanel::ProductsController < Cpanel::ApplicationController
 
   def create
     @product = Product.new(params[:product])
-    @product.content_html = markdown @product.content
     if @product.save
       redirect_to :action => :index
     else
@@ -25,9 +22,8 @@ class Cpanel::ProductsController < Cpanel::ApplicationController
 
   def edit
   end
+
   def update
-    @product = params[:product]
-    @product.content_html = markdown @product.content
     if @product.update_attributes(params[:product])
       redirect_to cpanel_products_path
     else

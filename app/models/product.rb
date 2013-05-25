@@ -5,6 +5,5 @@ class Product < ActiveRecord::Base
   default_scope order:  'id desc'
 
 #  extend HasHtmlPipeline
-#  has_html_pipeline :content, :markdown
   mount_uploader :pictures, LogoUploader
 end
