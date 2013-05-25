@@ -1,5 +1,4 @@
 # coding: utf-8
-require "redcarpet"
 module ApplicationHelper
 
   def notice_message
