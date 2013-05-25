@@ -91,9 +91,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    md_emoji (1.0.1)
-      railties (>= 3.1.0)
-      redcarpet (>= 2.0)
     meta_request (0.2.5)
       callsite
       rack-contrib
@@ -110,7 +107,6 @@ GEM
     net-ssh (2.6.7)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    nokogiri (1.5.9)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -130,8 +126,6 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
-    rails_autolink (1.1.0)
-      rails (> 3.1)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -143,11 +137,8 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    redcarpet (2.2.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rouge (0.3.4)
-      thor
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -198,16 +189,11 @@ DEPENDENCIES
   devise-encryptable
   jquery-atwho-rails (= 0.1.6)
   jquery-rails
-  md_emoji
   meta_request
   mini_magick (~> 3.5)
   mysql2
-  nokogiri (~> 1.5.6)
   rails (= 3.2.13)
-  rails_autolink (>= 1.0.9)
-  redcarpet (~> 2.2.2)
   rest-client
-  rouge (~> 0.3.2)
   sass-rails (~> 3.2.6)
   settingslogic (~> 2.0.9)
   simple_form
