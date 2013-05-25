@@ -12,6 +12,7 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
 end
 
+#上传组件
 gem 'carrierwave', '~> 0.8.0'
 gem 'mini_magick', '~> 3.5'
 gem 'rest-client'
