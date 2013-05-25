@@ -20,7 +20,7 @@ gem 'rails_autolink', '>= 1.0.9'
 gem 'md_emoji'
 
 # Covert html to markdown
-gem 'reverse_markdown'
+#gem 'reverse_markdown'
 
 #上传组件
 gem 'carrierwave', '~> 0.8.0'
@@ -28,8 +28,7 @@ gem 'mini_magick', '~> 3.5'
 gem 'rest-client'
 gem 'carrierwave-aliyun'
 
-#Kindeditor
-#gem 'rails_kindeditor', '~> 0.3.12'
+
 # 表单
 gem 'simple_form'
 gem 'jquery-rails'

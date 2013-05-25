@@ -146,8 +146,6 @@ GEM
     redcarpet (2.2.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    reverse_markdown (0.4.4)
-      nokogiri
     rouge (0.3.4)
       thor
     sass (3.2.9)
@@ -209,7 +207,6 @@ DEPENDENCIES
   rails_autolink (>= 1.0.9)
   redcarpet (~> 2.2.2)
   rest-client
-  reverse_markdown
   rouge (~> 0.3.2)
   sass-rails (~> 3.2.6)
   settingslogic (~> 2.0.9)
