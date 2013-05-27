@@ -8,6 +8,7 @@ Seearm::Application.routes.draw do
     root :to => "home#index"
     resources :categories
     resources :products
+    resource :positions
 
     resources :images
   end
@@ -15,10 +16,11 @@ Seearm::Application.routes.draw do
   match "products", :to => "products#index", :as => :products_lists
   match "products/:id", :to => "products#show", :as => :products_details
 
-  root :to => "home#index"
 
-  match "categories", :to => "categories#index", :as => :categories_lists
+  match "categories", :to => "products#index", :as => :categories_lists
   match "categories/:id", :to => "categories#show", :as => :categories_details
+
+  root :to => "home#index"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
