@@ -8,6 +8,7 @@
       categories: "分类"
       categories_list: "分类列表"
       products: "产品"
+      positions: "推荐产品"
       products_list: "产品列表"
 
     common:

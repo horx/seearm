@@ -1,3 +1,3 @@
 class Position < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :title, :desc, :image, :url
 end

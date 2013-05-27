@@ -1,0 +1,13 @@
+<%= simple_form_for([:cpanel,@position]) do |f| %>
+  <fieldset>
+    <legend></legend>
+    <%= f.input :title %>
+    <%= f.input :image, :placeholder => 'seearm'%>
+    <%= f.input :desc %>
+    <%= f.input :url %>
+    <div class="form-actions">
+      <%= f.submit t("cpanel.common.save"), :class => "btn btn-primary", 'data-disable-with' => t("cpanel.common.saving") %>
+      <%= link_to 'Back', cpanel_positions_path %>
+    </div>
+  </fieldset>
+<% end %>
