@@ -59,6 +59,9 @@ GEM
     carrierwave-aliyun (0.1.5)
       carrierwave (>= 0.5.7)
       rest-client (>= 1.6.7)
+    ckeditor (4.0.4)
+      mime-types
+      orm_adapter
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -182,15 +185,16 @@ DEPENDENCIES
   bootstrap-will_paginate (~> 0.0.9)
   bootstrap_helper (~> 2.1.2.1)
   capistrano
-  carrierwave (~> 0.8.0)
+  carrierwave
   carrierwave-aliyun
+  ckeditor
   coffee-rails (~> 3.2.2)
   devise
   devise-encryptable
   jquery-atwho-rails (= 0.1.6)
   jquery-rails
   meta_request
-  mini_magick (~> 3.5)
+  mini_magick
   mysql2
   rails (= 3.2.13)
   rest-client

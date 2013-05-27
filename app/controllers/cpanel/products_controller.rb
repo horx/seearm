@@ -41,6 +41,5 @@ class Cpanel::ProductsController < Cpanel::ApplicationController
   private
   def find_product
     @product = Product.find(params[:id])
-    @product.content = ReverseMarkdown.parse @product.content
   end
 end

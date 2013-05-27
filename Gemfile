@@ -13,8 +13,8 @@ group :assets do
 end
 
 #上传组件
-gem 'carrierwave', '~> 0.8.0'
-gem 'mini_magick', '~> 3.5'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'rest-client'
 gem 'carrierwave-aliyun'
 
@@ -22,6 +22,8 @@ gem 'carrierwave-aliyun'
 # 表单
 gem 'simple_form'
 gem 'jquery-rails'
+
+gem 'ckeditor'
 # 分页
 gem 'will_paginate', '~> 3.0.4'
 # 分享功能

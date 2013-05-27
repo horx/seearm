@@ -38,3 +38,12 @@
       check_in_button: "签到"
       has_checked_in_button: "已签到"
       invite_button: "邀请"
+
+      en:
+        ckeditor:
+          page_title: "CKEditor Files Manager"
+          confirm_delete: "Delete file?"
+          buttons:
+            cancel: "Cancel"
+            upload: "Upload"
+            delete: "Delete"
