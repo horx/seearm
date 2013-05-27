@@ -1,5 +1,5 @@
 <% content_for :sitemap do %>
-  <span class="current"><%= t("cpanel.menu.categories_list")%></span>
+    <span class="current"><%= t("cpanel.menu.categories_list") %></span>
 <% end %>
 <h1><%= t("cpanel.menu.categories_list") %></h1>
 
@@ -11,19 +11,19 @@
     <td class="opts">操作</td>
   </tr>
 
-<% @categories.each do |cat| %>
-  <tr>
-    <td class="first"><%= cat.id %></td>
-    <td><%= link_to cat.name, categories_details_path(cat.slug), target: "blank" %></td>
-    <td><%= cat.desc %></td>
-    <td>
-      <%= link_to '', edit_cpanel_category_path(cat.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
-      <%= link_to '', cpanel_category_path(cat.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
-    </td>
-  </tr>
-<% end %>
+  <% @categories.each do |cat| %>
+      <tr>
+        <td class="first"><%= cat.id %></td>
+        <td><%= link_to cat.name, categories_details_path(cat.slug), target: "blank" %></td>
+        <td><%= cat.desc %></td>
+        <td>
+          <%= link_to '', edit_cpanel_category_path(cat.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= link_to '', cpanel_category_path(cat.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+        </td>
+      </tr>
+  <% end %>
 </table>
-<br />
+<br/>
 
 <%= will_paginate @categories %>
 

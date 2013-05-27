@@ -7,14 +7,6 @@ class CkeditorPictureUploader < BaseUploader
   include CarrierWave::MiniMagick
   # include CarrierWave::ImageScience
 
-  def filename
-    if super.present?
-      # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记，所以它将是唯一的
-      @name ||= File.dirname(current_path)
-      "#{@name}.#{file.extension.downcase}"
-    end
-  end
-
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
@@ -22,9 +14,10 @@ class CkeditorPictureUploader < BaseUploader
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  # def default_url
-  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
-  # end
+
+  def default_url
+     "/images/" + [version_name, "no.png"].compact.join('_')
+   end
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]

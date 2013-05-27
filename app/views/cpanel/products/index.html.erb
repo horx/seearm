@@ -1,5 +1,5 @@
 <% content_for :sitemap do %>
-  <span class="current"><%= t("cpanel.menu.products_list")%></span>
+    <span class="current"><%= t("cpanel.menu.products_list") %></span>
 <% end %>
 <h1>产品列表</h1>
 <div id="cpanel_product">
@@ -13,20 +13,19 @@
       <th class="opts">操作</th>
     </tr>
     <% @products.each do |product| %>
-    <tr class="<%= cycle("","even") %>">
-      <td><%= product.id %></td>
-      <td><%= link_to product.name, products_details_path(product.id), target: "blank" %></td>
-      <td><%= product.category_id %></td>
-      <td><%= product.price %></td>
-      <td><%= product.status %></td>
-      <td>
-        <%= link_to '', edit_cpanel_product_path(product.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= link_to '', cpanel_product_path(product.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
-      </td>
-    </tr>
+        <tr class="<%= cycle("", "even") %>">
+          <td><%= product.id %></td>
+          <td><%= link_to product.name, products_details_path(product.id), target: "blank" %></td>
+          <td><%= product.category_id %></td>
+          <td><%= product.price %></td>
+          <td><%= product.status %></td>
+          <td>
+            <%= link_to '', edit_cpanel_product_path(product.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to '', cpanel_product_path(product.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+          </td>
+        </tr>
     <% end %>
   </table>
 </div>
-<div class="tools">
-  <a href="<%= new_cpanel_product_path %>" class="btn btn-small btn-success"><%= t("cpanel.common.create") %></a>
-</div>
+<%= will_paginate @products %>
+<a href="<%= new_cpanel_product_path %>" class="btn btn-small btn-success"><%= t("cpanel.common.create") %></a>
