@@ -21,7 +21,7 @@
               <p class="thumbnail"><img src="<%= product.pictures %>" alt="<%= product.name %>"></p>
 
               <p class="product-text"><%= raw(strip_tags(product.content).truncate(120)) %>
-                <%= link_to '产品详情>>', products_details_path(product.id), class: "product-more", target: "blank" %>
+                <%= link_to '产品详情>>', products_details_path(product.id), class: "product-more", target: "_blank" %>
               </p>
             </div>
             <!-- /product -->

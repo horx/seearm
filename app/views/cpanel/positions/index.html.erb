@@ -16,13 +16,13 @@
   <% @positions.each do |positon| %>
       <tr>
         <td class="first"><%= positon.id %></td>
-        <td><%= link_to positon.name %></td>
-        <td><%= link_to positon.image %></td>
+        <td><%= positon.title %></td>
+        <td><%= image_tag positon.image %></td>
         <td><%= positon.desc %></td>
         <td><%= link_to positon.url %></td>
         <td>
-          <%= link_to '', edit_cpanel_positon_path(cat.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= link_to '', cpanel_positon_path(positon.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+          <%= link_to '', edit_cpanel_position_path(positon.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= link_to '', cpanel_position_path(positon.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
         </td>
       </tr>
   <% end %>

@@ -603,3 +603,19 @@ input {
 .login-center, .register-center {
     text-align: center;
 }
+
+.seearm-home-item-three {
+    text-align: center;
+    height: 280px;
+}
+.seearm-home-item-three .thumbnail {
+    height: 150px;
+}
+.seearm-home-item-three .item {
+    padding-top: 10px;
+    height: 40px;
+    text-align: left;
+}
+.seearm-home-item-three p a {
+    color:#555;
+}

@@ -71,14 +71,14 @@
             
             <hr class="row-divider" />
             
-            
+            <!-- position two -->
             <div class="row divider service-container">
-                
+
                 <div class="grid-3">
                     <h2><span class="slash">//</span> Our Services</h2>
-                    
+
                     <p>Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae.</p>
-                    
+
                     <a href="javascript:;" class="btn btn-small btn-warning">More Services</a>
                 </div>
                 
@@ -131,62 +131,28 @@
             
             <hr class="row-divider" />
             
-            
+            <!-- position three -->
             <div class="row work-container">
+              <% @position_three.each do |three|%>
                 
                 <div class="grid-3">
-                    <h2><span class="slash">//</span> Our Work</h2>
-                    
-                    <p>Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae.</p>
-                    
-                    <a href="javascript:;" class="btn btn-small btn-warning">More Work</a>
-                    
-                </div> <!-- /grid-3 -->
-                
-                <div class="grid-3">
-                    <div class="work-item">
+                    <div class="seearm-home-item-three">
                         
-                        <h3>Portfolio Item #1</h3>
+                        <h3>
+                          <%= link_to three.title, three.url, target: "_blank" %>
+                        </h3>
                         
-                        <a class="thumbnail">
-                            <img src="assets/gallery/1_small.jpg" alt="" />
+                        <a class="thumbnail" href="<%= three.url %>" target="_blank">
+                          <%= image_tag three.image, :alt => three.title %>
                         </a> <!-- /img -->
-                        
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        
-                        <p><a href="javascript:;" class="">View Project »</a></p>           
+
+                        <p class="item">
+                          <%= link_to raw(strip_tags(three.desc).truncate(30)), three.url, target: "_blank" %>
+                        </p>
                     </div>
                 </div> <!-- /grid-3 -->
-                
-                <div class="grid-3">
-                    <div class="work-item">
-                        
-                        <h3>Portfolio Item #1</h3>
-                        
-                        <a class="thumbnail">
-                            <img src="assets/gallery/2_small.jpg" alt="" />
-                        </a> <!-- /img -->
-                        
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        
-                        <p><a href="javascript:;" class="">View Project »</a></p>           
-                    </div>
-                </div> <!-- /grid-3 -->
-                
-                <div class="grid-3">
-                    <div class="work-item">
-                        
-                        <h3>Portfolio Item #1</h3>
-                        
-                        <a class="thumbnail">
-                            <img src="assets/gallery/3_small.jpg" alt="" />
-                        </a> <!-- /img -->
-                        
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        
-                        <p><a href="javascript:;" class="">View Project »</a></p>           
-                    </div>
-                </div> <!-- /grid-3 -->
+
+              <% end %>
                 
             </div> <!-- /row -->
             

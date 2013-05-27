@@ -8,7 +8,7 @@ Seearm::Application.routes.draw do
     root :to => "home#index"
     resources :categories
     resources :products
-    resource :positions
+    resources :positions
 
     resources :images
   end

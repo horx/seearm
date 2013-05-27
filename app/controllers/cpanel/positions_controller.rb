@@ -7,7 +7,7 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
     end
 
     def new
-      @product = Position.new
+      @position = Position.new
     end
 
     def create

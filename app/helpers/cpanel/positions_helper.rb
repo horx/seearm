@@ -1,2 +1,0 @@
-module Cpanel::PositionsHelper
-end
