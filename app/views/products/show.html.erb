@@ -1,6 +1,10 @@
-<div id="page-title">
-  <h2><%= @product.name %></h2>
-  <p></p>
+<div>
+  <ul class="breadcrumb">
+    <li><a href="/">主页</a> <span class="divider">/</span></li>
+    <li><a href="<%= categories_lists_path %>">产品中心</a> <span class="divider">/</span></li>
+    <li><a href="<%= categories_details_path(@product.category.slug) %>"><%= @product.category.name %></a> <span class="divider">/</span></li>
+    <li class="active"><%= @product.name %></li>
+  </ul>
 </div>
 
 
@@ -16,7 +20,8 @@
                     产品图片
                 </h2>
                 <div class="thumbnail">
-                  <%= image_tag @product.pictures %>
+                  <%= image_tag @product.pictures, :alt => @product.name %>
+
                 </div>
 
             </div>
@@ -30,9 +35,9 @@
                 </h2>
                 <div class="product-right">
                     <p> <strong>产品名称: </strong><%= @product.name %></p>
-                    <p> <strong>产品类别: </strong><%= @product.category.name %></p>
+                    <p> <strong>产品类别: </strong><%= link_to @product.category.name, categories_details_path(@product.category.slug) %></p>
                     <p>
-                        <strong>产　　商: </strong>
+                        <strong>产　　商: </strong><%= @product.name %></p>
                     </p>
                     <p>
                         <strong>价　　格: </strong><%= @product.price %>

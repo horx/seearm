@@ -3,10 +3,12 @@ class CategoriesController < ApplicationController
   before_filter :find_category, :only => [:show]
 
   def index
-    @categories = Category.find_all_by_ctype(1)
+    @on = 'products'
+    redirect_to products_lists_path, :status => 301
   end
 
   def show
+    @on = 'products'
     find_category
     @products = Product.where(:category_id => @category.id)
     @categories = Category.find_all_by_ctype(1)

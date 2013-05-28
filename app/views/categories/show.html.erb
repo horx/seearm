@@ -1,9 +1,9 @@
 <div>
   <ul class="breadcrumb">
-  <li><a href="#">Home</a> <span class="divider">/</span></li>
-  <li><a href="#">Library</a> <span class="divider">/</span></li>
-  <li class="active">Data</li>
-</ul>
+    <li><a href="/">主页</a> <span class="divider">/</span></li>
+    <li><a href="<%= categories_lists_path %>">产品中心</a> <span class="divider">/</span></li>
+    <li class="active"><%= @category.name %></li>
+  </ul>
 </div>
 
 <div id="content">
@@ -13,22 +13,26 @@
         <%= render 'left' %>
       </div>
       <div class="grid-14">
-      <% @products.each do |product| %>
-          <div class="grid-15">
-            <div class="product-detail">
-              <h4><%= link_to product.name, products_details_path(product.id), target: "blank" %></h4>
+        <% @products.each do |product| %>
+            <div class="grid-15">
+              <div class="product-detail">
+                <h4><%= link_to product.name, products_details_path(product.id), target: "blank" %></h4>
 
-              <p class="thumbnail"><img src="<%= product.pictures %>" alt="<%= product.name %>"></p>
+                <p class="thumbnail">
+                  <a class="thumbnail" href="<%= products_details_path(product.id) %>" target="_blank">
+                    <%= image_tag product.pictures, :alt => product.name %>
+                  </a>
+                </p>
 
-              <p class="product-text"><%= raw(strip_tags(product.content).truncate(120)) %>
-                <%= link_to '产品详情>>', products_details_path(product.id), class: "product-more", target: "_blank" %>
-              </p>
+                <p class="product-text"><%= raw(strip_tags(product.content).truncate(120)) %>
+                  <%= link_to '产品详情>>', products_details_path(product.id), class: "product-more", target: "_blank" %>
+                </p>
+              </div>
+              <!-- /product -->
             </div>
-            <!-- /product -->
-          </div>
-          <div class=""></div>
-          <!-- /grid-15-->
-      <% end %>
+            <div class=""></div>
+            <!-- /grid-15-->
+        <% end %>
       </div>
 
     </div>

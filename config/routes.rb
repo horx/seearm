@@ -15,7 +15,7 @@ Seearm::Application.routes.draw do
   match "products/:id", :to => "products#show", :as => :products_details
 
 
-  match "categories", :to => "products#index", :as => :categories_lists
+  match "categories", :to => "categories#index", :as => :categories_lists
   match "categories/:id", :to => "categories#show", :as => :categories_details
 
   root :to => "home#index"

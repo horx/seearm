@@ -26,10 +26,10 @@
     <div id="nav" class="clearfix">
         <div class="container">
             <ul id="main-nav">
-                <li class="active">
+                <li <% if @on == 'home'%>class="active"<% end %>>
                     <%= link_to "首页",root_path %>
                 </li>
-                <li class="dropdown">
+                <li <% if @on == 'products'%>class="dropdown active"<% else %> class="dropdown"<% end %>>
                     <a href="#" data-toggle="dropdown">
                         产品中心
                         <span class="caret"></span>
@@ -40,13 +40,13 @@
                     <% end %>
                     </ul>
                 </li>              
-                <li>
+                <li <% if @on == 'news'%>class="active"<% end %>>
                     <%= link_to "新闻动态",root_path %>
                 </li>
-                <li>
+                <li <% if @on == 'contact'%>class="active"<% end %>>
                     <%= link_to "联系我们",root_path %>
                 </li>
-                <li>
+                <li <% if @on == 'guide'%>class="active"<% end %>>
                     <%= link_to "选购指南",root_path %>
                 </li>
             </ul>
