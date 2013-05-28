@@ -22,6 +22,8 @@ gem 'carrierwave-aliyun'
 # 表单
 gem 'simple_form'
 gem 'jquery-rails'
+
+gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
 gem 'ckeditor'

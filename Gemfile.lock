@@ -196,6 +196,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.2)
   devise
   devise-encryptable
+  execjs
   jquery-atwho-rails (= 0.1.6)
   jquery-rails
   meta_request
