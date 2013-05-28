@@ -23,8 +23,6 @@ gem 'carrierwave-aliyun'
 gem 'simple_form'
 gem 'jquery-rails'
 
-
-gem 'ckeditor'
 # 分页
 gem 'will_paginate', '~> 3.0.4'
 # 分享功能
