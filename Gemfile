@@ -10,9 +10,6 @@ group :assets do
   gem 'anjlab-bootstrap-rails', '~> 2.3.0.0', :require => 'bootstrap-rails'
   gem 'jquery-atwho-rails', '0.1.6'
   gem 'uglifier', '>= 1.3.0'
-  gem 'execjs'
-  gem 'libv8', '~> 3.11.8.12'
-  gem 'therubyracer', '~> 0.11.4'
 end
 
 #上传组件
