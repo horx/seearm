@@ -199,6 +199,7 @@ DEPENDENCIES
   execjs
   jquery-atwho-rails (= 0.1.6)
   jquery-rails
+  libv8 (~> 3.11.8.12)
   meta_request
   mini_magick
   mysql2

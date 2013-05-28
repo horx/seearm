@@ -24,6 +24,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 
 gem 'execjs'
+gem 'libv8', '~> 3.11.8.12'
 gem 'therubyracer', :platforms => :ruby
 
 gem 'ckeditor'
