@@ -25,7 +25,7 @@ gem 'jquery-rails'
 
 gem 'execjs'
 gem 'libv8', '~> 3.11.8.12'
-gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer', '~> 0.11.4' ,:platforms => :ruby
 
 gem 'ckeditor'
 # 分页

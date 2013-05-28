@@ -209,7 +209,7 @@ DEPENDENCIES
   settingslogic (~> 2.0.9)
   simple_form
   social-share-button
-  therubyracer
+  therubyracer (~> 0.11.4)
   uglifier (>= 1.3.0)
   unicorn
   will_paginate (~> 3.0.4)
