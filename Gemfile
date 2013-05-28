@@ -22,6 +22,7 @@ gem 'carrierwave-aliyun'
 # 表单
 gem 'simple_form'
 gem 'jquery-rails'
+gem 'therubyracer'
 
 gem 'ckeditor'
 # 分页
