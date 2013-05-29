@@ -18,6 +18,8 @@ gem 'mini_magick'
 gem 'rest-client'
 gem 'carrierwave-aliyun'
 
+#分类树形
+gem 'acts_as_tree', '~> 1.3.0'
 
 # 表单
 gem 'simple_form'
@@ -44,8 +46,6 @@ gem 'devise-encryptable'
 
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
 end
 
 group :production do

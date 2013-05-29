@@ -1,34 +1,4 @@
   <div class="well sidebar-nav">
-    <ul class="nav nav-list">
-      <% @categories.each do |category| %>
-          <% if category.pid == 0 %>
-              <li class="nav-header"><%= category.name %></li>
-          <% else %>
-              <li><%= link_to category.name, categories_details_path(category.slug.downcase), target: "_blank" %></li>
-          <% end %>
-      <% end %>
-    </ul>
+    <%= display_categories(@categories) %>
   </div>
   <!--/.well -->
-
-
-<!--
-
-   <div class="well sidebar-nav">
-    <ul class="nav nav-list">
-      <% @categories.each do |category| %>
-      <% if category.pid == 0 %>
-              <li class="nav-header"><%= category.name %></li>
-              <% if category.sub %>
-              <% category.sub.each do |c| %>
-                      <li><%= link_to c.name, categories_details_path(c.slug.downcase), target: "_blank" %></li>
-                  <% end %>
-          <% end %>
-      <% else %>
-              <li><%= link_to category.name, categories_details_path(category.slug.downcase), target: "_blank" %></li>
-          <% end %>
-  <% end %>
-    </ul>
-  </div>
-
- -->
