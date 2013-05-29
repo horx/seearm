@@ -16,8 +16,8 @@ module CategoriesHelper
   end
 
   def find_all_subcategories(category)
+    tree = ''
     if category.children.size > 0
-      tree = ''
       category.children.each { |subcat|
         if subcat.children.size > 0
           tree += '<li>'
@@ -32,6 +32,7 @@ module CategoriesHelper
       }
       tree += ''
     end
+    return tree
   end
 
 end
