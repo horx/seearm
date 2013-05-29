@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   #产品分类
   def index
     @on = 'products'
-    @categories = Category.all
+    @categories = Category.where('ctype = ? AND pid != ?',1,0)
   end
   def cat
     @on = 'products'
@@ -14,4 +14,5 @@ class ProductsController < ApplicationController
     @on = 'products'
     @product = Product.find(params[:id])
   end
+
 end
