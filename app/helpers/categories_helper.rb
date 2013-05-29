@@ -7,6 +7,7 @@ module CategoriesHelper
       if category.parent_id == 0
         tree += "<li class='nav-header'>"
         tree += category.name
+        tree += find_all_subcategories(category)
         tree += "</li>"
       end
     end
@@ -29,7 +30,6 @@ module CategoriesHelper
           tree += '</li>'
         end
       }
-      tree += ''
     end
     return tree
   end
