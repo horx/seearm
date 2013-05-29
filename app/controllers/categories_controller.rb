@@ -10,7 +10,13 @@ class CategoriesController < ApplicationController
   def show
     @on = 'products'
     find_category
-    @products = Product.where(:category_id => @category.id)
+    if (@category.parent_id == 0)
+      cat_ids = Category.where(:parent_id => @category.id).map { |i| [i.id] }
+    else
+      cat_ids =[@category.id]
+    end
+
+    @products = Product.paginate( :page => params[:page], :per_page => 6).where(:category_id => cat_ids)
   end
 
   protected
@@ -23,4 +29,5 @@ class CategoriesController < ApplicationController
     @category = Category.where(:slug => params[:id]).first
     render_404 if @category.nil?
   end
+
 end

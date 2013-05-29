@@ -454,6 +454,8 @@ input {
 .grid-12 { width: 880px; }
 .grid-13 { width: 240px; float: left; margin: 0 10px 0 0;}
 .grid-14 { width: 600px; float: left; }
+
+.grid-14 .pagination{float: right;padding-top: 10px; }
 .grid-15 { width: 280px;}
 
 .append-12 { padding-right: 900px; }

@@ -21,12 +21,12 @@ module CategoriesHelper
       category.children.each { |subcat|
         if subcat.children.size > 0
           tree += '<li>'
-          tree += link_to h(subcat.name), :action => 'show', :id => subcat
+          tree += link_to h(subcat.name), :controller => 'categories', :action => 'show', :id => subcat
           tree += find_all_subcategories(subcat)
           tree += '</li>'
         else
           tree += '<li>'
-          tree += link_to h(subcat.name), :action => 'show', :id => subcat
+          tree += link_to h(subcat.name), :controller => 'categories', :action => 'show', :id => subcat
           tree += '</li>'
         end
       }

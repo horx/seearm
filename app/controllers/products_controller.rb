@@ -4,11 +4,9 @@ class ProductsController < ApplicationController
   #产品分类
   def index
     @on = 'products'
+    @products = Product.paginate( :page => params[:page], :per_page => 6).all
   end
-  def cat
-    @on = 'products'
-  	@cats = Category.find_by_slug(params[:slug])
-  end
+
   def show
     @on = 'products'
     @product = Product.find(params[:id])
