@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
   #产品分类
   def index
     @on = 'products'
-    @categories = Category.where('ctype = ?',1)
   end
   def cat
     @on = 'products'

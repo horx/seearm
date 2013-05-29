@@ -11,7 +11,6 @@ class CategoriesController < ApplicationController
     @on = 'products'
     find_category
     @products = Product.where(:category_id => @category.id)
-    @categories = Category.find_all_by_ctype(1)
   end
 
   protected
