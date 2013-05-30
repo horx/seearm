@@ -1,5 +1,15 @@
 Seearm::Application.routes.draw do
 
+  get "pages/new"
+
+  get "pages/create"
+
+  get "pages/update"
+
+  get "pages/destroy"
+
+  get "pages/index"
+
   devise_for :users, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout',:sign_up => 'register'}
 
   namespace :cpanel do
@@ -7,6 +17,7 @@ Seearm::Application.routes.draw do
     resources :categories
     resources :products
     resources :positions
+    resources :pages
 
     resources :images
   end
@@ -14,6 +25,7 @@ Seearm::Application.routes.draw do
   match "products", :to => "products#index", :as => :products_lists
   match "products/:id", :to => "products#show", :as => :products_details
 
+  get "contact", :to => "page/contact", :as => :contact_page
 
   match "categories", :to => "categories#index", :as => :categories_lists
   match "categories/:id", :to => "categories#show", :as => :categories_details
