@@ -19,7 +19,7 @@
                 <h4><%= link_to product.name, products_details_path(product.id), target: "blank" %></h4>
 
                 <p class="thumbnail">
-                  <a class="thumbnail" href="<%= products_details_path(product.id) %>" target="_blank">
+                  <a href="<%= products_details_path(product.id) %>" target="_blank">
                     <%= image_tag product.pictures, :alt => product.name %>
                   </a>
                 </p>
