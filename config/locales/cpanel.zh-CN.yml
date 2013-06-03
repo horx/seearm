@@ -7,6 +7,8 @@
       root_path: "前台"
       categories: "分类"
       categories_list: "分类列表"
+      pages: "页面"
+      pages_list: "页面列表"
       products: "产品"
       positions: "推荐产品"
       products_list: "产品列表"

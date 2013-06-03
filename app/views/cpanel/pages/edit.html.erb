@@ -1,0 +1,5 @@
+<% content_for :sitemap do %>
+    <a href="<%= cpanel_pages_path %>"><%= t("cpanel.menu.pages")%></a> &gt; <span class="current"><%= t("common.edit")%></span>
+<% end %>
+<h1>编辑页面</h1>
+<%= render 'form' %>

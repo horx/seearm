@@ -1,2 +1,5 @@
-<h1>Cpanel::Pages#new</h1>
-<p>Find me in app/views/cpanel/pages/new.html.erb</p>
+<% content_for :sitemap do %>
+    <a href="<%= cpanel_pages_path %>"><%= t("cpanel.menu.pages")%></a> &gt; <span class="current"><%= t("cpanel.common.create")%></span>
+<% end %>
+<h1>新增页面</h1>
+<%= render 'form' %>

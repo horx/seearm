@@ -1,0 +1,1 @@
+INSERT INTO `seearm_dev`.`categories` (`id`, `name`, `slug`, `parent_id`, `ctype`, `desc`, `created_at`, `updated_at`) VALUES (NULL, '网站信息', 'info', '0', '3', NULL, CURRENT_DATE(), CURRENT_DATE());

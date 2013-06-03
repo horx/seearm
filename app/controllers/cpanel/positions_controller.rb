@@ -17,7 +17,7 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
       else
         render :action => :new
       end
-      flash[:notice] = "推荐内存创建成功"
+      flash[:notice] = "推荐内容创建成功"
     end
 
     def edit

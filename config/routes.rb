@@ -1,15 +1,5 @@
 Seearm::Application.routes.draw do
 
-  get "pages/new"
-
-  get "pages/create"
-
-  get "pages/update"
-
-  get "pages/destroy"
-
-  get "pages/index"
-
   devise_for :users, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout',:sign_up => 'register'}
 
   namespace :cpanel do
@@ -18,70 +8,15 @@ Seearm::Application.routes.draw do
     resources :products
     resources :positions
     resources :pages
-
     resources :images
   end
 
   match "products", :to => "products#index", :as => :products_lists
   match "products/:id", :to => "products#show", :as => :products_details
 
-  get "contact", :to => "page/contact", :as => :contact_page
-
   match "categories", :to => "categories#index", :as => :categories_lists
   match "categories/:id", :to => "categories#show", :as => :categories_details
 
   root :to => "home#index"
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match "pages/:id" => "pages#show", :as => :about
 end
