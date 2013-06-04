@@ -16,7 +16,8 @@ Seearm::Application.routes.draw do
 
   match "categories", :to => "categories#index", :as => :categories_lists
   match "categories/:id", :to => "categories#show", :as => :categories_details
+  match "pages/:id", :to => "pages#show", :as => :categories_lists
 
   root :to => "home#index"
-  match "pages/:id" => "pages#show", :as => :about
+  get '/about', to: "pages#about", :as => :about
 end

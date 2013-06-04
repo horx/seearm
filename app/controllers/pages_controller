@@ -1,7 +1,0 @@
-# coding: utf-8
-class PagesController < ApplicationController
-  def show
-    @seearm_page = Page.where(:slug => 'about').first
-  end
-
-end

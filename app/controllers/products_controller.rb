@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   def show
     @on = 'products'
     @product = Product.find(params[:id])
+    render_404 if @product.nil?
   end
 
 end
