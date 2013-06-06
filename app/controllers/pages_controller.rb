@@ -2,8 +2,10 @@
 class PagesController < ApplicationController
 
   def about
-    @page = Page.where(:slug => 'about').first
-    render_404 if @page.nil?
+    @about = Page.where(:slug => 'about').first
+    @contact = Page.where(:slug => 'contact').first
+    @address = Page.where(:slug => 'address').first
+    render_404 if @about.nil? || @contact.nil? || @address.nil?
     @on = 'about'
   end
 end

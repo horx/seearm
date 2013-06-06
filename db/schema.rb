@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603014818) do
+ActiveRecord::Schema.define(:version => 20130606014105) do
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.string   "slug"
-    t.integer  "parent_id",  :default => 0
-    t.boolean  "ctype",      :default => true
+    t.string   "name",       :default => "0",  :null => false
+    t.string   "slug",       :default => "0",  :null => false
+    t.integer  "parent_id",  :default => 0,    :null => false
+    t.boolean  "ctype",      :default => true, :null => false
     t.text     "desc"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
@@ -25,35 +25,45 @@ ActiveRecord::Schema.define(:version => 20130603014818) do
 
   add_index "categories", ["slug"], :name => "category_slug"
 
-  create_table "pages", :force => true do |t|
-    t.string   "name"
-    t.string   "slug"
-    t.integer  "category_id"
+  create_table "news", :force => true do |t|
+    t.string   "name",        :default => "0", :null => false
+    t.integer  "category_id", :default => 0,   :null => false
     t.text     "content"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
+  create_table "pages", :force => true do |t|
+    t.string   "name",        :default => "0", :null => false
+    t.string   "slug",        :default => "0", :null => false
+    t.integer  "category_id", :default => 0,   :null => false
+    t.text     "content"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  add_index "pages", ["slug"], :name => "page_slug"
+
   create_table "positions", :force => true do |t|
-    t.string   "title"
-    t.boolean  "location",   :default => false, :null => false
-    t.string   "image"
-    t.string   "url"
+    t.string   "title",      :default => "0",                     :null => false
+    t.integer  "location",   :default => 3,                       :null => false
+    t.string   "image",      :default => "0",                     :null => false
+    t.string   "url",        :default => "http://www.seearm.com"
     t.text     "desc"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
   end
 
   add_index "positions", ["location"], :name => "location"
 
   create_table "products", :force => true do |t|
-    t.string   "name"
-    t.string   "pictures"
-    t.integer  "category_id"
-    t.decimal  "price",        :precision => 10, :scale => 0
-    t.boolean  "status",                                      :default => false
+    t.string   "name",                                        :default => "0",                        :null => false
+    t.string   "pictures",                                    :default => "0",                        :null => false
+    t.integer  "category_id",                                 :default => 0,                          :null => false
+    t.decimal  "price",        :precision => 10, :scale => 0, :default => 0,                          :null => false
+    t.boolean  "status",                                      :default => false,                      :null => false
     t.string   "taobao_url",                                  :default => "http://seearm.taobao.com"
-    t.string   "keywords"
+    t.string   "keywords",                                    :default => "0",                        :null => false
     t.text     "content"
     t.text     "content_html"
     t.datetime "created_at",                                                                          :null => false

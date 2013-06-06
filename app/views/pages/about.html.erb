@@ -1,7 +1,7 @@
 <div>
   <ul class="breadcrumb">
     <li><a href="/">主页</a> <span class="divider">/</span></li>
-    <li class="active"><%= @page.name %></li>
+    <li class="active"><%= @about.name %></li>
   </ul>
 </div>
 
@@ -14,10 +14,10 @@
 
       <div class="grid-12">
 
-        <h2><span class="slash">//</span><%= @page.name %></h2>
+        <h2><span class="slash">//</span><%= @about.name %></h2>
 
         <p>
-          <%= raw @page.content %>
+          <%= raw @about.content %>
         </p>
 
       </div> <!-- /grid-12 -->
@@ -25,32 +25,20 @@
     </div> <!-- /row -->
 
     <hr class="row-divider" />
-
     <div class="row">
-
       <div class="grid-6">
-
-        <h2><span class="slash">//</span> Our Philosophy</h2>
-
-        <p>Nullam ligula sapien, pharetra eget volutpat vel, consequat in lectus.</p>
-
-        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Vivamus purus arcu, commodo cursus egestas et, dictum lobortis dui. Curabitur at mi eu mi sollicitudin faucibus at at libero.</p>
-
+        <h2><span class="slash">//</span><%= @contact.name %></h2>
+        <p><%= raw @contact.content %></p>
       </div> <!-- /grid-6 -->
-
-
       <div class="grid-6">
-
-        <h2><span class="slash">//</span> Our Mission</h2>
-
-        <p>Mauris viverra, tortor eget interdum lacinia, lacus mi tempor purus, eu commodo enim dui ac nisl. Morbi euismod ante quis tellus imperdiet porta. Morbi nisi nibh, facilisis a varius id, adipiscing vel purus.</p>
-
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
+        <h2><span class="slash">//</span><%= @address.name %></h2>
+        <p><%= raw @address.content %></p>
       </div> <!-- /grid-6 -->
-
+      <hr class="row-divider" />
+      <div id="contact-map">
+        <iframe width="100%" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=New+York&amp;sll=49.891235,-97.15369&amp;sspn=47.259509,86.923828&amp;ie=UTF8&amp;hq=&amp;hnear=New+York,+United+States&amp;ll=40.714867,-74.005537&amp;spn=0.019517,0.018797&amp;z=14&amp;iwloc=near&amp;output=embed"></iframe>
+      </div>
     </div> <!-- /row -->
-
   </div> <!-- /container -->
 
 </div> <!-- /content -->

@@ -39,14 +39,9 @@ gem 'settingslogic', '~> 2.0.9'
 # To use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.1'
 
-#gem 'json', '~> 1.8.0'
-
 gem 'devise'
 gem 'devise-encryptable'
 
-group :development do
-  gem 'better_errors'
-end
 
 group :production do
   gem 'unicorn'

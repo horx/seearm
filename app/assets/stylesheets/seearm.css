@@ -606,18 +606,18 @@ input {
     text-align: center;
 }
 
-.seearm-home-item-three {
+.seearm-home-item {
     text-align: center;
     height: 280px;
 }
-.seearm-home-item-three .thumbnail {
+.seearm-home-item .thumbnail {
     height: 150px;
 }
-.seearm-home-item-three .item-text {
+.seearm-home-item .item-text {
     padding-top: 10px;
     height: 40px;
     text-align: left;
 }
-.seearm-home-item-three p a {
+.seearm-home-item a {
     color:#555;
 }

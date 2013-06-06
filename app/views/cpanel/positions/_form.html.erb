@@ -2,7 +2,8 @@
   <fieldset>
     <legend></legend>
     <%= f.input :title %>
-    <%= f.input :image, :placeholder => 'seearm'%>
+    <%= f.input :image %>
+    <%= f.input :location, collection: 1..6, prompt: "选择推荐位置" %>
     <%= f.input :desc %>
     <%= f.input :url %>
     <div class="form-actions">
