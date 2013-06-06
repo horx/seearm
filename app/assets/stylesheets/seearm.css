@@ -608,16 +608,33 @@ input {
 
 .seearm-home-item {
     text-align: center;
-    height: 280px;
+    height: 260px;
 }
 .seearm-home-item .thumbnail {
     height: 150px;
 }
 .seearm-home-item .item-text {
     padding-top: 10px;
-    height: 40px;
     text-align: left;
 }
 .seearm-home-item a {
     color:#555;
+}
+
+.position {
+    width: 205px;
+    float: left;
+    margin: 0 7px;
+}
+.position-title h3 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #cccccc;
+    color: #f90;
+}
+.category-right {
+    width: 600px;
+    float: left;
 }

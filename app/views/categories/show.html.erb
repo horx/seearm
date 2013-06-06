@@ -13,6 +13,7 @@
         <%= render 'left' %>
       </div>
       <div class="grid-14">
+        <div class="category-right">
         <% @products.each do |product| %>
             <div class="grid-15">
               <div class="product-detail">
@@ -30,11 +31,10 @@
               </div>
               <!-- /product -->
             </div>
-            <div class=""></div>
             <!-- /grid-15-->
         <% end %>
-
-        <%= will_paginate @products, :inner_window => 2 %>
+       </div>
+       <%= will_paginate @products, :inner_window => 2 %>
       </div>
 
     </div>
