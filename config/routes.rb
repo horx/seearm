@@ -6,6 +6,7 @@ Seearm::Application.routes.draw do
     resources :products
     resources :positions
     resources :pages
+    resources :news
     resources :images
   end
 
