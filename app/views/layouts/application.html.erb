@@ -2,9 +2,11 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8">
-    <title>主页</title>
+    <%= render_page_title %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keywords" content="<%= @meta_keywords %>" />
+    <meta name="description" content="<%= @meta_description %>" />
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "app" %>
     <%= csrf_meta_tags %>

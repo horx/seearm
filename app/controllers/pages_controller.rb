@@ -7,5 +7,6 @@ class PagesController < ApplicationController
     @address = Page.where(:slug => 'address').first
     render_404 if @about.nil? || @contact.nil? || @address.nil?
     @on = 'about'
+    set_seo_meta("关于我们","关于我们,#{Setting.site_keywords}","#{Setting.site_desc}")
   end
 end
