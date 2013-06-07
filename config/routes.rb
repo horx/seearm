@@ -13,10 +13,10 @@ Seearm::Application.routes.draw do
   end
 
   match "products", :to => "products#index", :as => :products_lists
-  match "product/:id", :to => "products#show", :as => :products_details
+  match "/:id", :to => "products#show", :as => :products_details
 
   match "categories", :to => "categories#index", :as => :categories_lists
-  match "category/:id", :to => "categories#show", :as => :categories_details
+  match "products/c_:id", :to => "categories#show", :as => :categories_details
 
   match "news", :to => "news#index", :as => :news_lists
   match "news/:id", :to => "news#show", :as => :news_details
