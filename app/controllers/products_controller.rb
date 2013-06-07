@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   def index
     @on = 'products'
     @products = Product.paginate( :page => params[:page], :per_page => 6).all
-    set_seo_meta("产品中心 | 所有产品","##{Setting.site_keywords}","#{Setting.site_desc}")
+    set_seo_meta("产品中心 | 所有产品","#{Setting.site_keywords}","#{Setting.site_desc}")
   end
 
   def show
