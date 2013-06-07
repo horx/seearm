@@ -1,0 +1,46 @@
+<div>
+  <ul class="breadcrumb">
+    <li><a href="/">主页</a> <span class="divider">/</span></li>
+    <li><a href="<%= news_lists_path %>">新闻动态</a> <span class="divider">/</span></li>
+    <li class="active">新闻列表</li>
+  </ul>
+</div>
+
+<div id="content">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="grid-8">
+        <div class="news-list">
+          <ul>
+            <% @news.each do |news_item| %>
+                <li>
+                  <h3>
+                    <span>
+                      [<%= news_item.category.name %>]&nbsp;&nbsp;&nbsp;<%= news_item.updated_at %>
+                    </span>
+                    <%= link_to news_item.name, news_details_path(news_item.id), target: "blank" %>
+                  </h3>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+        <%= will_paginate @news, :inner_window => 2 %>
+
+      </div>
+      <!-- /grid-8 -->
+
+      <div class="sidebar" style="float: right;">
+        <%= render 'right' %>
+      </div>
+
+    </div>
+    <!-- /row -->
+
+
+  </div>
+  <!-- /container -->
+
+</div> <!-- /content -->

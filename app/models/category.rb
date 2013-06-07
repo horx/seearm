@@ -8,4 +8,6 @@ class Category < ActiveRecord::Base
   default_scope order:  'id desc'
 
   has_many :products
+  has_many :products
+  has_many :pages
 end

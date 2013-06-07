@@ -1,4 +1,5 @@
 Seearm::Application.routes.draw do
+
   devise_for :users, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout',:sign_up => 'register'}
   namespace :cpanel do
     root :to => "home#index"
@@ -16,6 +17,9 @@ Seearm::Application.routes.draw do
   match "categories", :to => "categories#index", :as => :categories_lists
   match "categories/:id", :to => "categories#show", :as => :categories_details
 
+  match "news", :to => "news#index", :as => :news_lists
+  match "news/:id", :to => "news#show", :as => :news_details
+
   root :to => "home#index"
-  get '/about', to: "pages#about", :as => :about
+  get "/about", to: "pages#about", :as => :about
 end

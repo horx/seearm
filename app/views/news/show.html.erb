@@ -1,0 +1,38 @@
+<div>
+  <ul class="breadcrumb">
+    <li><a href="/">主页</a> <span class="divider">/</span></li>
+    <li><a href="<%= news_lists_path %>"><%= @news.category.name %></a> <span class="divider">/</span></li>
+    <li class="active"><%= @news.name %></li>
+  </ul>
+</div>
+
+<div id="content">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="grid-8">
+        <div class="news-content">
+          <div class="news-top">
+            <h1><%= @news.name %></h1>
+            <span><%= @news.category.name %>&nbsp;&nbsp;<%= @news.updated_at %></span>
+            <%= social_share_button_tag("#{@news.name}") %>
+          </div>
+          <p><%= @news.content %></p>
+        </div>
+      </div>
+      <!-- /grid-8 -->
+
+      <div class="sidebar" style="float: right;">
+        <%= render 'right' %>
+      </div>
+
+    </div>
+    <!-- /row -->
+
+
+  </div>
+  <!-- /container -->
+
+</div> <!-- /content -->

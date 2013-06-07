@@ -618,7 +618,7 @@ input {
     text-align: left;
 }
 .seearm-home-item a {
-    color:#555;
+    color: #555;
 }
 
 .position {
@@ -637,4 +637,31 @@ input {
 .category-right {
     width: 600px;
     float: left;
+}
+
+.news-list h3 {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px dashed #cccccc;
+}
+.news-list h3 a {
+    color: #555;
+}
+
+.news-list h3 span {
+    color: #555;
+    font-size: 12px;
+    float: right;
+    font-weight: normal;
+}
+.news-top {
+    text-align: center;
+    padding-bottom: 16px;
+}
+.news-top h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.grid-8 .pagination {
+    float: right;
 }

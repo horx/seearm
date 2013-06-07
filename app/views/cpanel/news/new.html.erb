@@ -1,2 +1,5 @@
-<h1>News#new</h1>
-<p>Find me in app/views/news/new.html.erb</p>
+<% content_for :sitemap do %>
+    <a href="<%= cpanel_news_index_path %>"><%= t("cpanel.menu.news")%></a> &gt; <span class="current"><%= t("cpanel.common.create")%></span>
+<% end %>
+<h1>新增新闻</h1>
+<%= render 'form' %>
