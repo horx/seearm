@@ -13,17 +13,18 @@ Seearm::Application.routes.draw do
   end
 
   match "products", :to => "products#index", :as => :products_lists
-  match "/:id", :to => "products#show", :as => :products_details
-
-  match "categories", :to => "categories#index", :as => :categories_lists
-  match "products/c_:id", :to => "categories#show", :as => :categories_details
+  match "product/:id", :to => "products#show", :as => :products_details
 
   match "news", :to => "news#index", :as => :news_lists
   match "news/:id", :to => "news#show", :as => :news_details
 
+  match "categories", :to => "categories#index", :as => :categories_lists
+  match "products/c_:id", :to => "categories#show", :as => :categories_details
+
   match "guides", :to => "guides#index", :as => :guides_lists
   match "guide/:id", :to => "guides#show", :as => :guide_detail
 
-  root :to => "home#index"
   get "/about", to: "pages#about", :as => :about
+
+  root :to => "home#index"
 end
