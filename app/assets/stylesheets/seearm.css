@@ -294,7 +294,8 @@ input {
 */
 #seearm {
     position: relative;
-    height: 375px;
+    /* height: 375px; */
+    height: 282px;
     margin-bottom: 2.5em;
     -moz-box-shadow: 1px 1px 6px rgba(0,0,0,.5);    
     -webkit-box-shadow: 1px 1px 6px rgba(0,0,0,.5);
@@ -672,4 +673,16 @@ input {
 .guide-tip p {
     font-size: 18px;
     text-indent: 21pt
+}
+
+.navbar-search .search-query-google {
+    padding: 4px 14px;
+    margin-bottom: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }

@@ -39,9 +39,9 @@
       <% @position_two.each do |two| %>
           <div class="position">
             <div class="seearm-home-item">
-              <h4>
+              <h2>
                 <%= link_to two.title, two.url, target: "_blank", title: "#{two.title}" %>
-              </h4>
+              </h2>
               <a class="thumbnail" href="<%= two.url %>" target="_blank">
                 <%= image_tag two.image, :alt => two.title %>
               </a>
@@ -64,9 +64,9 @@
           <div class="position">
             <div class="seearm-home-item">
 
-              <h4>
+              <h2>
                 <%= link_to three.title, three.url, target: "_blank", title: "#{three.title}" %>
-              </h4>
+              </h2>
 
               <a class="thumbnail" href="<%= three.url %>" target="_blank">
                 <%= image_tag three.image, :alt => three.title %>

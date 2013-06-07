@@ -1,120 +1,175 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <meta charset="utf-8">
-    <%= render_page_title %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="keywords" content="<%= @meta_keywords %>" />
-    <meta name="description" content="<%= @meta_description %>" />
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "app" %>
-    <%= csrf_meta_tags %>
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
+<head>
+  <meta charset="utf-8">
+  <%= render_page_title %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="keywords" content="<%= @meta_keywords %>"/>
+  <meta name="description" content="<%= @meta_description %>"/>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "app" %>
+  <%= csrf_meta_tags %>
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
 <body>
 
 <div id="wrapper" class="clearfix">
-    <div id="header">
-        <div class="container">
-            <h1 id="title">
-                <%= link_to "首页",root_path %>
-            </h1>
-        </div> <!-- /container -->
-    </div> <!-- /header -->
-    <div id="nav" class="clearfix">
-        <div class="container">
-            <ul id="main-nav">
-                <li <% if @on == 'home'%>class="active"<% end %>>
-                    <%= link_to "首页",root_path %>
-                </li>
-                <li <% if @on == 'products'%>class="dropdown active"<% else %> class="dropdown"<% end %>>
-                    <a href="#" data-toggle="dropdown">
-                        产品中心
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                    <% Category.where("parent_id = ? AND ctype = ?", 0, 1).each do |category| %>
-                        <li><a href="<%= categories_details_path(category.slug.downcase) %>"><i class="icon-book"></i><%= category.name %></a></li>
-                    <% end %>
-                    </ul>
-                </li>              
-                <li <% if @on == 'news'%>class="active"<% end %>>
-                    <%= link_to "新闻动态",news_lists_path %>
-                </li>
-                <li <% if @on == 'about'%>class="active"<% end %>>
-                    <%= link_to "关于我们",about_path %>
-                </li>
-                <li <% if @on == 'guide'%>class="active"<% end %>>
-                    <%= link_to "选购指南",guides_lists_path %>
-                </li>
-            </ul>
-        </div> <!-- /container -->
-        
-    </div> <!-- /nav -->
-    <!-- main body -->
-    <%= yield %>
-    <!-- main body -->
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="grid-6">
-                    <h1 id="footer-logo">京卓电子</h1>
-                    <p>上海京卓电子技术有限公司<br />地址:上海市镇西路187弄151号601 (近地铁1号线锦江乐园站/莲花路站)</p>
-                </div> <!-- /grid-4 -->     
-                <div class="grid-6">
-                    <h3>联系我们</h3>
-                    <p>
-                      电话 ：021-33199132  &nbsp;&nbsp;&nbsp;&nbsp;传真 ：021-33199132<br />
-                      手机 ：13918792655  &nbsp;&nbsp;&nbsp;&nbsp;公司淘宝店 ：<a href="http://seearm.taobao.com" target="_blank" title="京卓电子taobao店">seearm.taobao.com</a> <br />
-                      Email ：<a href="mailto:seearm@163.com?Subject=产品咨询">seearm@163.com</a>，<a href="mailto:sales@seearm.com?Subject=产品咨询">sales@seearm.com</a> <br />
-                      QQ ：1014493640，93644331，15481690</p>
-                    <!--
-                    <ul class="social-icons-container">
-                    <li>
-                      <a href="http://seearm.taobao.com" target="_blank" title="京卓电子新浪微博">新浪微博</a>
-                    </li>
-                    <li>
-                      <a href="http://seearm.taobao.com" target="_blank" title="京卓电子腾讯微博">腾讯微博</a>
-                    </li>
-                    <li>
-                      <a href="http://seearm.taobao.com" target="_blank" title="京卓电子taobao店">Taobao</a>
-                    </li>
-                  </ul>
-                  -->
+  <div id="header">
+    <div class="container">
+      <h1 id="title">
+        <%= link_to Setting.site_name, root_path, title: Setting.site_name %>
+      </h1>
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /header -->
+  <div id="nav" class="clearfix">
+    <div class="container">
+      <ul id="main-nav">
+        <li
+        <% if @on == 'home' %>class="active"
+        <% end %>>
+          <%= link_to "首页", root_path, title: "#{Setting.site_name}" %>
+        </li>
+        <li
+        <% if @on == 'products' %>class="dropdown active"
+        <% else %> class="dropdown"
+        <% end %>>
+          <a href="#" data-toggle="dropdown">
+            产品中心
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <% Category.where("parent_id = ? AND ctype = ?", 0, 1).each do |category| %>
+                <li>
+                  <a href="<%= categories_details_path(category.slug.downcase) %>" title="<%= category.name %>"><i class="icon-book"></i><%= category.name %>
+                  </a></li>
+            <% end %>
+          </ul>
+        </li>
+        <li
+        <% if @on == 'news' %>class="active"
+        <% end %>>
+          <%= link_to "新闻动态", news_lists_path %>
+        </li>
+        <li
+        <% if @on == 'guide' %>class="active"
+        <% end %>>
+          <%= link_to "选购指南", guides_lists_path %>
+        </li>
+        <li
+        <% if @on == 'about' %>class="active"
+        <% end %>>
+          <%= link_to "关于我们", about_path %>
+        </li>
+        <li>
+          <%= link_to "淘宝购买", 'http://seearm.taobao.com', target: "_blank" %>
+        </li>
+        <li style="padding-top: 5px;">
+          <form onsubmit="return search()" class="navbar-search pull-left">
+            <input type="text" name="q" id="q" class="search-query-google" value="" placeholder="搜索">
+          </form>
+        </li>
+      </ul>
+    </div>
+    <!-- /container -->
 
-                </div> <!-- /grid-4 -->
+  </div>
+  <!-- /nav -->
+  <!-- main body -->
+  <%= yield %>
+  <!-- main body -->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="grid-6">
+          <h1 id="footer-logo">京卓电子</h1>
 
-            </div> <!-- /row -->
-        </div> <!-- /container -->
-    </div> <!-- /footer -->
-    
-    <div id="copyright">
-        <div class="container">
-            <div class="row">
-                <div id="rights" class="grid-6">
-                © 2008 ~ 2013 <a href="http://www.seearm.com" title="京卓电子">www.seearm.com</a> All Rights Reserved.
-                </div> <!-- /grid-6 -->
-                <div id="totop" class="grid-6">
-                    <a href="http://www.seearm.com" title="京卓电子">www.seearm.com</a>
-                </div> <!-- /grid-6 -->
-            </div> <!-- /row -->
-        </div> <!-- /container -->
-    </div> <!-- /copyright -->
-</div> <!-- /wrapper -->
+          <p>上海京卓电子技术有限公司<br/>地址:上海市镇西路187弄151号601 (近地铁1号线锦江乐园站/莲花路站)</p>
+        </div>
+        <!-- /grid-4 -->
+        <div class="grid-6">
+          <h3>联系我们</h3>
+
+          <p>
+            电话 ：021-33199132 &nbsp;&nbsp;&nbsp;&nbsp;传真 ：021-33199132<br/>
+            手机 ：13918792655 &nbsp;&nbsp;&nbsp;&nbsp;公司淘宝店
+            ：<a href="http://seearm.taobao.com" target="_blank" title="京卓电子taobao店">seearm.taobao.com</a> <br/>
+            Email
+            ：<a href="mailto:seearm@163.com?Subject=产品咨询">seearm@163.com</a>，<a href="mailto:sales@seearm.com?Subject=产品咨询">sales@seearm.com</a>
+            <br/>
+            QQ ：1014493640，93644331，15481690</p>
+          <!--
+          <ul class="social-icons-container">
+          <li>
+            <a href="http://seearm.taobao.com" target="_blank" title="京卓电子新浪微博">新浪微博</a>
+          </li>
+          <li>
+            <a href="http://seearm.taobao.com" target="_blank" title="京卓电子腾讯微博">腾讯微博</a>
+          </li>
+          <li>
+            <a href="http://seearm.taobao.com" target="_blank" title="京卓电子taobao店">Taobao</a>
+          </li>
+        </ul>
+        -->
+
+        </div>
+        <!-- /grid-4 -->
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer -->
+
+  <div id="copyright">
+    <div class="container">
+      <div class="row">
+        <div id="rights" class="grid-6">
+          © 2008 ~ 2013 <a href="http://www.seearm.com" title="京卓电子">www.seearm.com</a> All Rights Reserved.
+        </div>
+        <!-- /grid-6 -->
+        <div id="totop" class="grid-6">
+          <a href="http://www.seearm.com" title="京卓电子">www.seearm.com</a>
+        </div>
+        <!-- /grid-6 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /copyright -->
+</div>
+<!-- /wrapper -->
+<script type="text/javascript">
+    var search = function() {
+        q = document.getElementById("q");
+        if (q.value != "") {
+            window.open('http://www.google.com/search?q=site:www.seearm.com%20' + q.value, "_blank");
+            return false;
+        } else {
+            return false;
+        }
+    }
+</script>
 
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39284474-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39284474-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
 </script>
-  </body>
+</body>
 </html>
