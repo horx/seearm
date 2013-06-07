@@ -43,13 +43,13 @@
                     </ul>
                 </li>              
                 <li <% if @on == 'news'%>class="active"<% end %>>
-                    <%= link_to "新闻动态",root_path %>
+                    <%= link_to "新闻动态",news_lists_path %>
                 </li>
                 <li <% if @on == 'about'%>class="active"<% end %>>
                     <%= link_to "关于我们",about_path %>
                 </li>
                 <li <% if @on == 'guide'%>class="active"<% end %>>
-                    <%= link_to "选购指南",root_path %>
+                    <%= link_to "选购指南",guides_lists_path %>
                 </li>
             </ul>
         </div> <!-- /container -->

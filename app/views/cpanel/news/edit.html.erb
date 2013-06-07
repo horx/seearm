@@ -1,0 +1,5 @@
+<% content_for :sitemap do %>
+    <a href="<%= cpanel_news_index_path %>"><%= t("cpanel.menu.news")%></a> &gt; <span class="current"><%= t("common.edit")%></span>
+<% end %>
+<h1>编辑新闻</h1>
+<%= render 'form' %>

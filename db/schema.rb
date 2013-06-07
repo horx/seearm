@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606014105) do
+ActiveRecord::Schema.define(:version => 20130607050921) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",       :default => "0",  :null => false
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(:version => 20130606014105) do
   end
 
   add_index "categories", ["slug"], :name => "category_slug"
+
+  create_table "guides", :force => true do |t|
+    t.string   "name",        :default => "0", :null => false
+    t.integer  "category_id", :default => 4,   :null => false
+    t.string   "file",        :default => "0", :null => false
+    t.text     "content"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
 
   create_table "news", :force => true do |t|
     t.string   "name",        :default => "0", :null => false

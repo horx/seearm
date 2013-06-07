@@ -669,3 +669,7 @@ input {
 .grid-8 .pagination {
     float: right;
 }
+.guide-tip p {
+    font-size: 18px;
+    text-indent: 21pt
+}
