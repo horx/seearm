@@ -1,0 +1,27 @@
+<% content_for :sitemap do %>
+    <span class="current"><%= t("cpanel.menu.teches_list") %></span>
+<% end %>
+<h1>产品列表</h1>
+<div id="cpanel_product">
+  <table class="table table-bordered table-striped table-condensed">
+    <tr class="head">
+      <th>ID</th>
+      <th>指南名</th>
+      <th>分类</th>
+      <th class="opts">操作</th>
+    </tr>
+    <% @teches.each do |tech| %>
+        <tr class="<%= cycle("", "even") %>">
+          <td><%= tech.id %></td>
+          <td><%= link_to tech.name, tech_detail_path(tech.id), target: "_blank" %></td>
+          <td><%= tech.category_id %></td>
+          <td>
+            <%= link_to '', edit_cpanel_tech_path(tech.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to '', cpanel_tech_path(tech.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>
+<%= will_paginate @teches %>
+<a href="<%= new_cpanel_tech_path %>" class="btn btn-small btn-success"><%= t("cpanel.common.create") %></a>

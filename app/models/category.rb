@@ -12,5 +12,6 @@ class Category < ActiveRecord::Base
   has_many :pages
   has_many :news
   has_many :guides
+  has_many :teches
 
 end
