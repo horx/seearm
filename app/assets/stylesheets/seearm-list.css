@@ -51,6 +51,10 @@
     float: right;
     padding-right: 10px;
 }
+.grid-5 .social-share-button {
+    margin-top: 20px;
+    float: left;
+}
 .product-detail .thumbnail {
     padding: 20px 4px 4px 4px;
 }
