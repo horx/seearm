@@ -55,6 +55,9 @@
     margin-top: 10px;
     float: left;
 }
+.product-right p {
+    margin-bottom: 1.5em;
+}
 .product-detail .thumbnail {
     padding: 20px 4px 4px 4px;
 }
