@@ -54,7 +54,7 @@
             购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank" %></strong>
           </p>
           -->
-          <%= social_share_button_tag("从 seearm.com 分享了 #{@product.name} ,你也来看看吧",:url => products_details_path, :image => @product.pictures) %>
+          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_path, :image => @product.pictures) %>
         </div>
       </div>
       <!-- /grid-7 -->
