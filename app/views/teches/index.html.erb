@@ -1,0 +1,46 @@
+<div>
+  <ul class="breadcrumb">
+    <li><a href="/">主页</a> <span class="divider">/</span></li>
+    <li><a href="<%= teches_lists_path %>">资料文库</a> <span class="divider">/</span></li>
+    <li class="active">资料列表</li>
+  </ul>
+</div>
+
+<div id="content">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="grid-8">
+        <div class="news-list">
+          <ul>
+            <% @teches.each do |tech| %>
+                <li>
+                  <h3>
+                    <span>
+                      [<%= tech.category.name %>]&nbsp;&nbsp;&nbsp;<%= tech.updated_at %>
+                    </span>
+                    <%= link_to tech.name, tech_detail_path(tech.id), target: "blank" %>
+                  </h3>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+        <%= will_paginate @teches, :inner_window => 2 %>
+
+      </div>
+      <!-- /grid-8 -->
+
+      <div class="sidebar" style="float: right;">
+        <%= render 'news/right' %>
+      </div>
+
+    </div>
+    <!-- /row -->
+
+
+  </div>
+  <!-- /container -->
+
+</div> <!-- /content -->
