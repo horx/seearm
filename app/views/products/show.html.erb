@@ -20,7 +20,7 @@
         <div class="thumbnail">
           <%= image_tag @product.pictures, :alt => @product.name %>
         </div>
-        <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_path) %>
+
       </div>
       <!-- /grid-5 -->
 
@@ -47,14 +47,9 @@
           </p>
 
           <p>
-            <strong>购买方式: </strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank" %>
+            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank" %></strong>
           </p>
-          <!--
-          <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </p>
-
-          -->
+          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_path) %>
         </div>
       </div>
       <!-- /grid-7 -->
