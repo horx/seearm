@@ -1,0 +1,58 @@
+<div>
+  <ul class="breadcrumb">
+    <li><a href="/">主页</a> <span class="divider">/</span></li>
+    <li class="active">选购指南</li>
+  </ul>
+</div>
+
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="grid-12">
+        <div class="guide-tip">
+          <h3>尊敬的朋友您好:</h3>
+          <p>
+            欢迎来到“购买指南”版块，您将了解到如何购买我们的产品，如何购买适合您的产品，或者根据您的需求我们为您推荐/代购市面上其他高性价比的ARM产品。
+          </p>
+
+          <p>
+            如果您是ARM技术的初学者，想要一款开发板用来学习，但是您不明白如何选购，那么，请您到这里来，将您的想法留给我们，标明您的联系方式，我们会有专门的工程师为您选购符合您要求的产品。
+            如果您已经深入的了解ARM技术，需要用ARM开发板来开发新的产品或者新的尝试，那么，请您到这里来，我们将为您提供高性价比的产品。
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr class="row-divider">
+    <div class="row">
+      <div class="grid-8">
+        <div class="news-list">
+          <ul>
+            <% @guides.each do |gudie| %>
+                <li>
+                  <h3>
+                    <span>
+                      <%= gudie.updated_at %>
+                    </span>
+                    <%= link_to gudie.name, guide_detail_path(gudie.id), target: "blank" %>
+                  </h3>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+        <%= will_paginate @guides, :inner_window => 2 %>
+
+      </div>
+      <!-- /grid-8 -->
+
+      <div class="sidebar" style="float: right;">
+        <%= render 'news/right' %>
+      </div>
+
+    </div>
+    <!-- /row -->
+
+
+  </div>
+  <!-- /container -->
+
+</div> <!-- /content -->

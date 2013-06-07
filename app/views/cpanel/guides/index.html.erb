@@ -1,0 +1,27 @@
+<% content_for :sitemap do %>
+    <span class="current"><%= t("cpanel.menu.guides_list") %></span>
+<% end %>
+<h1>产品列表</h1>
+<div id="cpanel_product">
+  <table class="table table-bordered table-striped table-condensed">
+    <tr class="head">
+      <th>ID</th>
+      <th>指南名</th>
+      <th>分类</th>
+      <th class="opts">操作</th>
+    </tr>
+    <% @guides.each do |guide| %>
+        <tr class="<%= cycle("", "even") %>">
+          <td><%= guide.id %></td>
+          <td><%= link_to guide.name, guide_detail_path(guide.id), target: "_blank" %></td>
+          <td><%= guide.category.name %></td>
+          <td>
+            <%= link_to '', edit_cpanel_guide_path(guide.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to '', cpanel_guide_path(guide.id), :method => :delete, 'data-confirm' => '确定要删除吗?', :class => "icon small_delete" %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>
+<%= will_paginate @guides %>
+<a href="<%= new_cpanel_guide_path %>" class="btn btn-small btn-success"><%= t("cpanel.common.create") %></a>

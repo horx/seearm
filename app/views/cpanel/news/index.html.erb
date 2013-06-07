@@ -13,7 +13,7 @@
     <% @news.each do |news_item| %>
         <tr class="<%= cycle("", "even") %>">
           <td><%= news_item.id %></td>
-          <td><%= link_to news_item.name %></td>
+          <td><%= link_to news_item.name, news_details_path(news_item.id), target: "_blank" %></td>
           <td><%= news_item.category.name %></td>
           <td>
             <%= link_to '', edit_cpanel_news_path(news_item.id), :class => "icon small_edit" %>&nbsp;&nbsp;&nbsp;&nbsp;
