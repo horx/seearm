@@ -13,13 +13,17 @@
     <div class="row">
 
       <div class="grid-8">
-        <div class="news-content">
+        <div class="news-main">
           <div class="news-top">
             <h1><%= @news.name %></h1>
             <span><%= @news.category.name %>&nbsp;&nbsp;<%= @news.updated_at %></span>
-            <%= social_share_button_tag("#{@news.name}") %>
+
           </div>
-          <p><%= @news.content %></p>
+          <div class="news-content">
+          <p><%= raw @news.content %></p>
+          </div>
+
+          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@news.name} ,你也来看看吧",:url => news_details_path) %>
         </div>
       </div>
       <!-- /grid-8 -->

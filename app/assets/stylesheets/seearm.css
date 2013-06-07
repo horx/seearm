@@ -654,6 +654,10 @@ input {
     float: right;
     font-weight: normal;
 }
+.news-main .social-share-button {
+    float: right;
+    padding-right: 10px;
+}
 .news-top {
     text-align: center;
     padding-bottom: 16px;
