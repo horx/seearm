@@ -38,10 +38,18 @@
 	padding-left: 20px;
 	width: 90%;
 }
+.product-title h1 {
+    font-size: 22px;
+
+}
 .product-content {
 	float: left;
 	padding-left: 20px;
-	width: 90%;
+}
+.grid-12 .social-share-button {
+    margin-top: 20px;
+    float: right;
+    padding-right: 10px;
 }
 .product-detail .thumbnail {
     padding: 20px 4px 4px 4px;
