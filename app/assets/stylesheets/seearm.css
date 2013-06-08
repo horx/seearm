@@ -687,3 +687,7 @@ input {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+.see-search {
+    padding-top: 5px;
+    float: right;
+}
