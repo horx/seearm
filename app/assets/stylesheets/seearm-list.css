@@ -50,6 +50,8 @@
     margin-top: 20px;
     float: right;
     padding-right: 10px;
+    width: 700px;
+    text-align: right;
 }
 .product-right .social-share-button {
     margin-top: 10px;
