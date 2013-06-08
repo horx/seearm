@@ -26,9 +26,7 @@
   <div id="nav" class="clearfix">
     <div class="container">
       <ul id="main-nav">
-        <li
-        <% if @on == 'home' %>class="active"
-        <% end %>>
+        <li <% if @on == 'home' %>class="active" <% end %>>
           <%= link_to "首页", root_path, title: "#{Setting.site_name}" %>
         </li>
         <li
