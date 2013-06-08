@@ -23,7 +23,7 @@
           <p><%= raw @tech.content %></p>
           </div>
 
-          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@tech.name} ,你也来看看吧",:url => tech_detail_path) %>
+          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@tech.name} ,你也来看看吧",:url => tech_detail_url) %>
         </div>
       </div>
       <!-- /grid-8 -->
