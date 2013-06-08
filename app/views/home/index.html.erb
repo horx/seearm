@@ -24,13 +24,7 @@
         <a class="carousel-control right" href="#seearm-carousel" data-slide="next">&rsaquo;</a>
       </div>
     </div>
-    <!-- /container -->
 </div>
-<!-- /seearm -->
-
-
-
-
 <div id="content">
   <div class="container">
     <!-- position two -->
@@ -51,47 +45,26 @@
               </p>
             </div>
           </div>
-          <!-- /grid-3 -->
       <% end %>
     </div>
-    <!-- /row -->
-
     <!-- position three -->
     <div class="position-title"><h3>热卖产品</h3></div>
     <div class="row work-container">
       <% @position_three.each do |three| %>
-
           <div class="position">
             <div class="seearm-home-item">
-
               <h2>
                 <%= link_to three.title, three.url, target: "_blank", title: "#{three.title}" %>
               </h2>
-
               <a class="thumbnail" href="<%= three.url %>" target="_blank">
                 <%= image_tag three.image, :alt => three.title %>
               </a> <!-- /img -->
-
               <p class="item-text">
                 <%= link_to raw(strip_tags(three.desc).truncate(30)), three.url, target: "_blank", title: "#{three.title}" %>
               </p>
             </div>
           </div>
-          <!-- /grid-3 -->
-
       <% end %>
-
     </div>
-    <!-- /row -->
-
   </div>
-  <!-- /container -->
-
 </div>
-<!-- /content -->
-
-  <script>
-      $(function () {
-          $('#seearm-carousel').carousel({ interval: false });
-      });
-  </script>

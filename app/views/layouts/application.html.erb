@@ -8,7 +8,6 @@
   <meta name="keywords" content="<%= @meta_keywords %>"/>
   <meta name="description" content="<%= @meta_description %>"/>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "app" %>
   <%= csrf_meta_tags %>
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -16,7 +15,6 @@
   <![endif]-->
 </head>
 <body>
-
 <div id="wrapper" class="clearfix">
   <div id="header">
     <div class="container">
@@ -24,9 +22,7 @@
         <%= link_to Setting.site_name, root_path, title: Setting.site_name %>
       </h1>
     </div>
-    <!-- /container -->
   </div>
-  <!-- /header -->
   <div id="nav" class="clearfix">
     <div class="container">
       <ul id="main-nav">
@@ -45,25 +41,19 @@
           </a>
           <ul class="dropdown-menu">
             <% Category.where("parent_id = ? AND ctype = ?", 0, 1).each do |category| %>
-                <li>
-                  <a href="<%= categories_details_path(category.slug.downcase) %>" title="<%= category.name %>"><i class="icon-book"></i><%= category.name %>
-                  </a></li>
+            <li>
+              <a href="<%= categories_details_path(category.slug.downcase) %>" title="<%= category.name %>"><i class="icon-book"></i><%= category.name %></a>
+            </li>
             <% end %>
           </ul>
         </li>
-        <li
-        <% if @on == 'news' %>class="active"
-        <% end %>>
+        <li <% if @on == 'news' %>class="active" <% end %>>
           <%= link_to "新闻动态", news_lists_path %>
         </li>
-        <li
-        <% if @on == 'guide' %>class="active"
-        <% end %>>
+        <li <% if @on == 'guide' %>class="active" <% end %>>
           <%= link_to "选购指南", guides_lists_path %>
         </li>
-        <li
-        <% if @on == 'about' %>class="active"
-        <% end %>>
+        <li <% if @on == 'about' %>class="active" <% end %>>
           <%= link_to "关于我们", about_path %>
         </li>
         <li>
@@ -76,25 +66,18 @@
         </form>
       </div>
     </div>
-    <!-- /container -->
-
   </div>
-  <!-- /nav -->
-  <!-- main body -->
   <%= yield %>
-  <!-- main body -->
   <div id="footer">
     <div class="container">
       <div class="row">
         <div class="grid-6">
           <h1 id="footer-logo">京卓电子</h1>
-
           <p>上海京卓电子技术有限公司<br/>地址:上海市镇西路187弄151号601 (近地铁1号线锦江乐园站/莲花路站)</p>
         </div>
         <!-- /grid-4 -->
         <div class="grid-6">
           <h3>联系我们</h3>
-
           <p>
             电话 ：021-33199132 &nbsp;&nbsp;&nbsp;&nbsp;传真 ：021-33199132<br/>
             手机 ：13918792655 &nbsp;&nbsp;&nbsp;&nbsp;公司淘宝店
@@ -116,38 +99,29 @@
           </li>
         </ul>
         -->
-
         </div>
-        <!-- /grid-4 -->
-
       </div>
-      <!-- /row -->
     </div>
-    <!-- /container -->
   </div>
-  <!-- /footer -->
-
   <div id="copyright">
     <div class="container">
       <div class="row">
         <div id="rights" class="grid-6">
           © 2008 ~ 2013 <a href="http://www.seearm.com" title="京卓电子">www.seearm.com</a> All Rights Reserved.
         </div>
-        <!-- /grid-6 -->
         <div id="totop" class="grid-6">
           <a href="http://www.seearm.com" title="京卓电子">www.seearm.com</a>
         </div>
-        <!-- /grid-6 -->
       </div>
-      <!-- /row -->
     </div>
-    <!-- /container -->
   </div>
-  <!-- /copyright -->
 </div>
-<!-- /wrapper -->
+<%= javascript_include_tag "app" %>
 <script type="text/javascript">
-    var search = function() {
+    $(function () {
+        $('#seearm-carousel').carousel({ interval: false });
+    });
+    var search = function () {
         q = document.getElementById("q");
         if (q.value != "") {
             window.open('http://www.google.com/search?q=site:www.seearm.com%20' + q.value, "_blank");
@@ -155,9 +129,8 @@
         } else {
             return false;
         }
-    }
+    };
 </script>
-
 <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-39284474-1']);
