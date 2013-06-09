@@ -7,16 +7,13 @@
     <li class="active"><%= @product.name %></li>
   </ul>
 </div>
-
 <div id="content">
   <div class="container">
     <div class="row">
       <div class="grid-5">
         <h2>
-          <span class="slash"></span>
           产品图片
         </h2>
-
         <div class="thumbnail">
           <%= image_tag @product.pictures, :alt => @product.name %>
         </div>
@@ -26,7 +23,6 @@
 
       <div class="grid-7">
         <h2>
-          <span class="slash"></span>
           产品信息
         </h2>
 
@@ -37,15 +33,12 @@
           <p>产品类别:
             <strong><%= link_to @product.category.name, categories_details_path(@product.category.slug), target: "_blank" %></strong>
           </p>
-
           <p>
             产　　商: <strong><%= @product.name %></strong>
           </p>
-
           <p>
             价　　格: <strong><%= @product.price %></strong>
           </p>
-
           <p>
             购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank" %></strong>
           </p>
@@ -61,7 +54,6 @@
     </div>
     <!-- /row -->
     <hr class="row-divider"/>
-
     <div class="row">
       <div class="grid-12">
         <div class="product-title">
@@ -69,7 +61,6 @@
           <%= @product.name %> 详细信息
         </h1>
         </div>
-
         <div class="product-content">
           <%= raw @product.content_html %>
         </div>
