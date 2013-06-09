@@ -41,7 +41,7 @@
               </a>
 
               <p class="item-text">
-                <%= link_to raw(strip_tags(two.desc).truncate(60)), two.url, target: "_blank", title: "#{two.title}" %>
+                <%= link_to raw(strip_tags(two.desc).truncate(42)), two.url, target: "_blank", title: "#{two.title}" %>
               </p>
             </div>
           </div>
@@ -60,7 +60,7 @@
                 <%= image_tag three.image, :alt => three.title %>
               </a> <!-- /img -->
               <p class="item-text">
-                <%= link_to raw(strip_tags(three.desc).truncate(60)), three.url, target: "_blank", title: "#{three.title}" %>
+                <%= link_to raw(strip_tags(three.desc).truncate(42)), three.url, target: "_blank", title: "#{three.title}" %>
               </p>
             </div>
           </div>
