@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
     end
 
     @products = Product.paginate( :page => params[:page], :per_page => 6).where(:category_id => cat_ids)
-    set_seo_meta("#{@category.name}-产品中心","#{@category.name},#{Setting.site_keywords}","#{@category.name},#{Setting.site_desc}")
+    set_seo_meta("#{@category.name}-产品中心|#{Setting.site_name}","#{@category.name},#{Setting.site_keywords}","#{@category.name},#{Setting.site_desc}")
   end
 
   protected
