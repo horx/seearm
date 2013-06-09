@@ -613,6 +613,10 @@ input {
 }
 .seearm-home-item .thumbnail {
     height: 150px;
+  }
+.seearm-home-item .thumbnail img {
+    height: 150px;
+    width: 215px;
 }
 .seearm-home-item .item-text {
     padding-top: 10px;
@@ -620,6 +624,9 @@ input {
 }
 .seearm-home-item a {
     color: #555;
+}
+.seearm-home-item h2 {
+    font-size: 18px;
 }
 
 .position {
@@ -630,8 +637,7 @@ input {
 .position-title h3 {
     font-size: 24px;
     font-weight: bold;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+    margin-bottom:0px;
     border-bottom: 1px dashed #cccccc;
     color: #f90;
 }
