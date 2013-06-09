@@ -294,9 +294,8 @@ input {
 */
 #seearm {
     position: relative;
-    /* height: 375px; */
-    height: 282px;
-    margin-bottom: 2.5em;
+    height: 375px;
+    margin-bottom: 5px;
     -moz-box-shadow: 1px 1px 6px rgba(0,0,0,.5);    
     -webkit-box-shadow: 1px 1px 6px rgba(0,0,0,.5);
     box-shadow: 1px 1px 6px rgba(0,0,0,.5);
@@ -635,7 +634,7 @@ input {
     margin: 0 7px;
 }
 .position-title h3 {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom:0px;
     border-bottom: 1px dashed #cccccc;
