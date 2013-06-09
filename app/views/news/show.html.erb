@@ -5,38 +5,24 @@
     <li class="active"><%= @news.name %></li>
   </ul>
 </div>
-
 <div id="content">
-
   <div class="container">
-
     <div class="row">
-
       <div class="grid-8">
         <div class="news-main">
           <div class="news-top">
             <h1><%= @news.name %></h1>
             <span><%= @news.category.name %>&nbsp;&nbsp;<%= @news.updated_at %></span>
-
           </div>
           <div class="news-content">
           <p><%= raw @news.content %></p>
           </div>
-
-          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@news.name} ,你也来看看吧",:url => news_details_url) %>
+          <%= social_share_button_tag("从 #{Setting.app_name} 分享了 #{@news.name} ,你也来看看吧",:url => news_details_url) %>
         </div>
       </div>
-      <!-- /grid-8 -->
-
       <div class="sidebar" style="float: right;">
         <%= render 'right' %>
       </div>
-
     </div>
-    <!-- /row -->
-
-
   </div>
-  <!-- /container -->
-
 </div> <!-- /content -->

@@ -5,19 +5,14 @@
     <li class="active"><%= @guide.name %></li>
   </ul>
 </div>
-
 <div id="content">
-
   <div class="container">
-
     <div class="row">
-
       <div class="grid-8">
         <div class="news-main">
           <div class="news-top">
             <h1><%= @guide.name %></h1>
             <span><%= @guide.category.name %>&nbsp;&nbsp;<%= @guide.updated_at %></span>
-
           </div>
           <div class="news-content">
             <p><%= raw @guide.content %></p>
@@ -25,23 +20,13 @@
             <% if @guide.file != '0' %>
             <p>相关资料: <%= @guide.file %></p>
             <% end %>
-
           </div>
-
-          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@guide.name} ,你也来看看吧",:url => guide_detail_url) %>
+          <%= social_share_button_tag("从 #{Setting.app_name} 分享了 #{@guide.name} ,你也来看看吧",:url => guide_detail_url) %>
         </div>
       </div>
-      <!-- /grid-8 -->
-
       <div class="sidebar" style="float: right;">
         <%= render 'news/right' %>
       </div>
-
     </div>
-    <!-- /row -->
-
-
   </div>
-  <!-- /container -->
-
 </div> <!-- /content -->

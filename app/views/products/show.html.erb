@@ -17,15 +17,11 @@
         <div class="thumbnail">
           <%= image_tag @product.pictures, :alt => @product.name %>
         </div>
-
       </div>
-      <!-- /grid-5 -->
-
       <div class="grid-7">
         <h2>
           产品信息
         </h2>
-
         <div class="product-right">
           <p>产品名称:
             <strong><%= @product.name %></strong>
@@ -47,12 +43,10 @@
             购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank" %></strong>
           </p>
           -->
-          <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_url, :image => @product.pictures) %>
+          <%= social_share_button_tag("从 #{Setting.app_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_url, :image => @product.pictures) %>
         </div>
       </div>
-      <!-- /grid-7 -->
     </div>
-    <!-- /row -->
     <hr class="row-divider"/>
     <div class="row">
       <div class="grid-12">
@@ -62,10 +56,10 @@
         </h1>
         </div>
         <div class="product-content">
-          <%= raw @product.content_html %>
+          <%= raw @product.content %>
         </div>
         <br />
-        <%= social_share_button_tag("从 #{Setting.site_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_url) %>
+        <%= social_share_button_tag("从 #{Setting.app_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_url) %>
       </div>
     </div>
   </div>
