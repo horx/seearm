@@ -11,7 +11,7 @@
                end
             %>
             <div class="<%= @class %>">
-            <a href="<%= one.url %>" title="<%= one.title %>"><%= image_tag one.image, :alt => one.title %></a>
+            <a href="<%= one.url %>" title="<%= one.title %>" target="_blank"><%= image_tag one.image, :alt => one.title %></a>
             <div class="seearm-details">
               <h2><%= one.title %></h2>
               <p><%= raw one.desc %></p>
