@@ -27,7 +27,7 @@
             <strong itemprop="name"><%= @product.name %></strong>
           </p>
           <p>产品类别:
-            <strong itemprop="category"><%= link_to @product.category.name, categories_details_path(@product.category.slug), target: "_blank" %></strong>
+            <strong itemprop="category"><%= link_to @product.category.name, categories_details_path(@product.category.slug), :target => "_blank" %></strong>
           </p>
           <p>
             产　　商: <strong itemprop="brand"><%= @product.name %></strong>
@@ -36,11 +36,11 @@
             价　　格: <strong itemprop="currency" content="CNY"><%= @product.price %></strong>
           </p>
           <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank", itemprop: "url"%></strong>
+            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, :target => "_blank", :itemprop => "url" %></strong>
           </p>
           <!--
           <p>
-            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank" %></strong>
+            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, :target => "_blank" %></strong>
           </p>
           -->
           <%= social_share_button_tag("从 #{Setting.app_name} 分享了 #{@product.name} ,你也来看看吧",:url => products_details_url, :image => @product.pictures) %>
