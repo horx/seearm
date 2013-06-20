@@ -8,35 +8,35 @@
   </ul>
 </div>
 <div id="content">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/Product">
     <div class="row">
       <div class="grid-5">
         <h2>
-          产品图片
+          <%= @product.name %>图片
         </h2>
-        <div class="thumbnail">
+        <div class="thumbnail" itemprop="image">
           <%= image_tag @product.pictures, :alt => @product.name %>
         </div>
       </div>
       <div class="grid-7">
         <h2>
-          产品信息
+          <%= @product.name %>信息
         </h2>
         <div class="product-right">
           <p>产品名称:
-            <strong><%= @product.name %></strong>
+            <strong itemprop="name"><%= @product.name %></strong>
           </p>
           <p>产品类别:
-            <strong><%= link_to @product.category.name, categories_details_path(@product.category.slug), target: "_blank" %></strong>
+            <strong itemprop="category"><%= link_to @product.category.name, categories_details_path(@product.category.slug), target: "_blank" %></strong>
           </p>
           <p>
-            产　　商: <strong><%= @product.name %></strong>
+            产　　商: <strong itemprop="brand"><%= @product.name %></strong>
           </p>
           <p>
-            价　　格: <strong><%= @product.price %></strong>
+            价　　格: <strong itemprop="currency" content="CNY"><%= @product.price %></strong>
           </p>
-          <p>
-            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank" %></strong>
+          <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, target: "_blank", itemprop: "url"%></strong>
           </p>
           <!--
           <p>
@@ -55,7 +55,7 @@
           <%= @product.name %> 详细信息
         </h1>
         </div>
-        <div class="product-content">
+        <div class="product-content" itemprop="description">
           <%= raw @product.content %>
         </div>
         <br />
