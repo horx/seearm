@@ -14,8 +14,8 @@
         <h2>
           <%= @product.name %>图片
         </h2>
-        <div class="thumbnail" itemprop="image">
-          <%= image_tag @product.pictures, :alt => @product.name %>
+        <div class="thumbnail">
+          <%= image_tag @product.pictures, :alt => @product.name, :itemprop => "image" %>
         </div>
       </div>
       <div class="grid-7">
@@ -33,10 +33,10 @@
             产　　商: <strong itemprop="brand"><%= @product.name %></strong>
           </p>
           <p itemscope itemtype="http://schema.org/Offer">
-            价　　格: <strong itemprop="price"><%= @product.price %></strong>
+            价　　格: <strong itemprop="offers price"><%= @product.price %></strong>
           </p>
-          <p itemscope itemtype="http://schema.org/Offer">
-            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, :target => "_blank", :itemprop => "url" %></strong>
+          <p>
+            购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, :target => "_blank", :itemprop => "offers url" %></strong>
           </p>
           <!--
           <p>
