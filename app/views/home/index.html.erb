@@ -36,9 +36,9 @@
           <div class="position" itemscope itemtype="http://schema.org/Product">
             <div class="seearm-home-item">
               <h2>
-                <%= link_to two.title, two.url, :target => "_blank", :title => "#{two.title}", :itemprop => "name url" %>
+                <%= link_to two.title, two.url, :target => "_blank", :title => "#{two.title}", :itemprop => "name" %>
               </h2>
-              <a class="thumbnail" href="<%= two.url %>" target="_blank">
+              <a class="thumbnail" href="<%= two.url %>" target="_blank" itemprop = "url">
                 <%= image_tag two.image, :alt => two.title, :itemprop => "image" %>
               </a>
 
@@ -56,7 +56,7 @@
           <div class="position" itemscope itemtype="http://schema.org/Product">
             <div class="seearm-home-item">
               <h2>
-                <%= link_to three.title, three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "name url" %>
+                <%= link_to three.title, three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "name" %>
               </h2>
               <a class="thumbnail" href="<%= three.url %>" target="_blank" itemprop="url">
                 <%= image_tag three.image, :alt => three.title, :itemprop => "image" %>
