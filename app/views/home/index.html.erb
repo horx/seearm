@@ -1,7 +1,7 @@
 <div id="seearm">
   <div class="container">
     <div id="seearm-carousel" class="carousel slide">
-      <div class="carousel-inner">
+      <div class="carousel-inner" itemscope itemtype="http://schema.org/Product">
         <% i = 1 %>
         <% @position_one.each do |one| %>
             <%
@@ -11,10 +11,12 @@
                end
             %>
             <div class="<%= @class %>">
-            <a href="<%= one.url %>" title="<%= one.title %>" target="_blank"><%= image_tag one.image, :alt => one.title %></a>
+            <a href="<%= one.url %>" title="<%= one.title %>" target="_blank" itemprop="url">
+              <%= image_tag one.image, :alt => one.title, :itemprop => "image" %>
+            </a>
             <div class="seearm-details">
-              <h2><%= one.title %></h2>
-              <p><%= raw one.desc %></p>
+              <h2 itemprop="name"><%= one.title %></h2>
+              <p itemprop="description"><%= raw one.desc %></p>
             </div>
             </div>
             <% i = i + 1 %>
@@ -26,7 +28,7 @@
     </div>
 </div>
 <div id="content">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/Product">
     <!-- position two -->
     <div class="position-title"><h3>推荐产品</h3></div>
     <div class="row work-container">
@@ -34,14 +36,14 @@
           <div class="position">
             <div class="seearm-home-item">
               <h2>
-                <%= link_to two.title, two.url, target: "_blank", title: "#{two.title}" %>
+                <%= link_to two.title, two.url, :target => "_blank", :title => "#{two.title}", :itemprop => "name url" %>
               </h2>
               <a class="thumbnail" href="<%= two.url %>" target="_blank">
-                <%= image_tag two.image, :alt => two.title %>
+                <%= image_tag two.image, :alt => two.title, :itemprop => "image" %>
               </a>
 
               <p class="item-text">
-                <%= link_to raw(strip_tags(two.desc).truncate(42)), two.url, target: "_blank", title: "#{two.title}" %>
+                <%= link_to raw(strip_tags(two.desc).truncate(42)), two.url, :target => "_blank", :title => "#{two.title}", :itemprop => "description" %>
               </p>
             </div>
           </div>
@@ -54,13 +56,13 @@
           <div class="position">
             <div class="seearm-home-item">
               <h2>
-                <%= link_to three.title, three.url, target: "_blank", title: "#{three.title}" %>
+                <%= link_to three.title, three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "name url"  %>
               </h2>
-              <a class="thumbnail" href="<%= three.url %>" target="_blank">
-                <%= image_tag three.image, :alt => three.title %>
+              <a class="thumbnail" href="<%= three.url %>" target="_blank" itemprop="url" >
+                <%= image_tag three.image, :alt => three.title, :itemprop => "image" %>
               </a> <!-- /img -->
               <p class="item-text">
-                <%= link_to raw(strip_tags(three.desc).truncate(42)), three.url, target: "_blank", title: "#{three.title}" %>
+                <%= link_to raw(strip_tags(three.desc).truncate(42)), three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "description"%>
               </p>
             </div>
           </div>
