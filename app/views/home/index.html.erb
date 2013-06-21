@@ -1,7 +1,7 @@
 <div id="seearm">
   <div class="container">
     <div id="seearm-carousel" class="carousel slide">
-      <div class="carousel-inner" itemscope itemtype="http://schema.org/Product">
+      <div class="carousel-inner">
         <% i = 1 %>
         <% @position_one.each do |one| %>
             <%
@@ -10,30 +10,30 @@
                  @class = 'item'
                end
             %>
-            <div class="<%= @class %>">
-            <a href="<%= one.url %>" title="<%= one.title %>" target="_blank" itemprop="url">
-              <%= image_tag one.image, :alt => one.title, :itemprop => "image" %>
-            </a>
-            <div class="seearm-details">
-              <h2 itemprop="name"><%= one.title %></h2>
-              <p itemprop="description"><%= raw one.desc %></p>
-            </div>
+            <div class="<%= @class %>" itemscope itemtype="http://schema.org/Product">
+              <a href="<%= one.url %>" title="<%= one.title %>" target="_blank" itemprop="url">
+                <%= image_tag one.image, :alt => one.title, :itemprop => "image" %>
+              </a>
+              <div class="seearm-details">
+                <h2 itemprop="name"><%= one.title %></h2>
+                <p itemprop="description"><%= raw one.desc %></p>
+              </div>
             </div>
             <% i = i + 1 %>
         <% end %>
-        </div>
-        <a class="carousel-control left" href="#seearm-carousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#seearm-carousel" data-slide="next">&rsaquo;</a>
       </div>
+      <a class="carousel-control left" href="#seearm-carousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#seearm-carousel" data-slide="next">&rsaquo;</a>
     </div>
+  </div>
 </div>
 <div id="content">
-  <div class="container" itemscope itemtype="http://schema.org/Product">
+  <div class="container">
     <!-- position two -->
     <div class="position-title"><h3>推荐产品</h3></div>
     <div class="row work-container">
       <% @position_two.each do |two| %>
-          <div class="position">
+          <div class="position" itemscope itemtype="http://schema.org/Product">
             <div class="seearm-home-item">
               <h2>
                 <%= link_to two.title, two.url, :target => "_blank", :title => "#{two.title}", :itemprop => "name url" %>
@@ -53,16 +53,16 @@
     <div class="position-title"><h3>热卖产品</h3></div>
     <div class="row work-container">
       <% @position_three.each do |three| %>
-          <div class="position">
+          <div class="position" itemscope itemtype="http://schema.org/Product">
             <div class="seearm-home-item">
               <h2>
-                <%= link_to three.title, three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "name url"  %>
+                <%= link_to three.title, three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "name url" %>
               </h2>
-              <a class="thumbnail" href="<%= three.url %>" target="_blank" itemprop="url" >
+              <a class="thumbnail" href="<%= three.url %>" target="_blank" itemprop="url">
                 <%= image_tag three.image, :alt => three.title, :itemprop => "image" %>
               </a> <!-- /img -->
               <p class="item-text">
-                <%= link_to raw(strip_tags(three.desc).truncate(42)), three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "description"%>
+                <%= link_to raw(strip_tags(three.desc).truncate(42)), three.url, :target => "_blank", :title => "#{three.title}", :itemprop => "description" %>
               </p>
             </div>
           </div>
