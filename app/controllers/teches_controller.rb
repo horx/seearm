@@ -3,6 +3,7 @@ class TechesController < ApplicationController
     @on = 'news'
     @teches = Tech.paginate( :page => params[:page], :per_page => 20).all
     set_seo_meta("资料文库|#{Setting.site_name}","资料文库,#{Setting.site_keywords}","#{Setting.site_desc}")
+    fresh_when(:etag => [@teches])
   end
 
   def show
@@ -10,5 +11,6 @@ class TechesController < ApplicationController
     @tech = Tech.find(params[:id])
     render_404 if @tech.nil?
     set_seo_meta("#{@tech.name}-#{@tech.category.name}|#{Setting.site_name}","#{@tech.name},#{@tech.category.name},#{Setting.site_keywords}","#{@tech.name},#{@tech.category.name},#{Setting.site_desc}")
+    fresh_when(:etag => [@tech])
   end
 end
