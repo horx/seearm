@@ -32,7 +32,7 @@
           <p>
             产　　商: <strong itemprop="brand"><%= @product.name %></strong>
           </p>
-          <p>
+          <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             价　　格: <strong itemprop="price"><%= @product.price %></strong>
           </p>
           <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">
