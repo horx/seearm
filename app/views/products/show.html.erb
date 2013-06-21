@@ -27,7 +27,7 @@
             <strong itemprop="name"><%= @product.name %></strong>
           </p>
           <p>产品类别:
-            <strong itemprop="category"><%= link_to @product.category.name, categories_details_path(@product.category.slug), :target => "_blank" %></strong>
+            <strong><%= link_to @product.category.name, categories_details_path(@product.category.slug), :target => "_blank" %></strong>
           </p>
           <p>
             产　　商: <strong itemprop="brand"><%= @product.name %></strong>
