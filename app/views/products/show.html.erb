@@ -32,10 +32,10 @@
           <p>
             产　　商: <strong itemprop="brand"><%= @product.name %></strong>
           </p>
-          <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <p itemscope itemtype="http://schema.org/Offer">
             价　　格: <strong itemprop="price"><%= @product.price %></strong>
           </p>
-          <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <p itemscope itemtype="http://schema.org/Offer">
             购买方式: <strong><%= link_to "淘宝购买", @product.taobao_url, :target => "_blank", :itemprop => "url" %></strong>
           </p>
           <!--
