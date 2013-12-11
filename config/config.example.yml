@@ -1,6 +1,9 @@
 defaults: &defaults
-  app_name: "Seearm"
-  foot_html: "&copy; Seearm.com"
+  app_name: "See"
+  site_name: "see app"
+  site_keywords: "see app demo, see app download, ruby on rails"
+  site_desc: "see app is on open source web app build with ruby on rails"
+  foot_html: "&copy; xrangers.com"
   domain: "127.0.0.1:3000"
   admin_emails:
     - "hanhor.wu@gmail.com"
@@ -11,9 +14,9 @@ defaults: &defaults
   upyun_password: "123123"
   upyun_bucket: "ruby-china-files-dev"
   email_server: "smtp.google.com"
-  email_sender: 'dev-test@seearm.com'
+  email_sender: 'dev-test@xrangers.com'
   email_password: 'test123456'
-  weibo: "seearm"
+  weibo: "http://weibo.com/xrangers"
 
 development:
   <<: *defaults
