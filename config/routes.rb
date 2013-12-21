@@ -17,6 +17,7 @@ Seearm::Application.routes.draw do
   match "product/:id", :to => "products#show", :as => :products_details
 
   match "categories", :to => "categories#index", :as => :categories_lists
+  match 'categories/:id' => redirect('/products')
   match "products/c_:id", :to => "categories#show", :as => :categories_details
 
   match "news", :to => "news#index", :as => :news_lists
@@ -29,6 +30,8 @@ Seearm::Application.routes.draw do
   match "tech/:id", :to => "teches#show", :as => :tech_detail
 
   get "/about", to: "pages#about", :as => :about
+
+  match 'bbs' => redirect('/products')
 
   root :to => "home#index"
 end
