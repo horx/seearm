@@ -1,5 +1,5 @@
 GIT
-  remote: git@gitlab.hanhor.com:os/kindeditor.git
+  remote: git@gitlab.hanhor.com:os/rails_kindeditor.git
   revision: 48ccf37d18831bf27fc57addf6a84722adbb5805
   specs:
     rails_kindeditor (0.4.4)
