@@ -33,6 +33,8 @@ gem 'social-share-button'
 gem 'bootstrap-will_paginate', '~> 0.0.9'
 gem 'bootstrap_helper', '~> 2.1.2.1'
 
+gem 'rails_kindeditor', :git => 'git@gitlab.hanhor.com:os/kindeditor.git'
+
 # YAML 配置信息
 gem 'settingslogic', '~> 2.0.9'
 

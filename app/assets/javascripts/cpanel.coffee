@@ -10,4 +10,5 @@
 #= require twitter/bootstrap/button
 #= require jquery.html5-fileupload
 #= require will_paginate
+#= require kindeditor
 #= require_self

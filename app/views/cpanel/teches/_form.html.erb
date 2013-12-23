@@ -3,7 +3,7 @@
       <legend></legend>
       <%= f.input :name %>
       <%= f.input :category_id, :collection => Category.where("parent_id = ? AND ctype = ?", 0, 5).collect { |s| [s.name,s.id] } %>
-      <%= f.input :content, :input_html => {:class => "xxlarge", :rows => 3} %>
+      <%= f.input :content, :as => :kindeditor, :label => false, :input_html => { :width => 800, :height => 300, :class => "xxlarge", :rows => 3} %>
       <div class="form-actions">
         <%= f.submit t("cpanel.common.save"), :class => "btn btn-primary", 'data-disable-with' => t("cpanel.common.saving") %>
         <%= link_to 'Back', cpanel_teches_path %>

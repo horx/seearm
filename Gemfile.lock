@@ -1,3 +1,11 @@
+GIT
+  remote: git@gitlab.hanhor.com:os/kindeditor.git
+  revision: 48ccf37d18831bf27fc57addf6a84722adbb5805
+  specs:
+    rails_kindeditor (0.4.4)
+      carrierwave
+      mini_magick
+
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -179,6 +187,7 @@ DEPENDENCIES
   mini_magick
   mysql2
   rails (= 3.2.13)
+  rails_kindeditor!
   rest-client
   sass-rails (~> 3.2.6)
   settingslogic (~> 2.0.9)
