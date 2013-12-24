@@ -1,10 +1,19 @@
+<div id="product_images">
+  <img src="http://statics.seearm.com/seearm/images/a2889e1ddcdc498d66ac32b34b517f30.png" width="120" height="120">
+  <img src="http://statics.seearm.com/seearm/images/a2889e1ddcdc498d66ac32b34b517f30.png" width="120" height="120">
+  <img src="http://statics.seearm.com/seearm/images/a2889e1ddcdc498d66ac32b34b517f30.png" width="120" height="120">
+  <img src="http://statics.seearm.com/seearm/images/a2889e1ddcdc498d66ac32b34b517f30.png" width="120" height="120">
+  <img src="http://statics.seearm.com/seearm/images/a2889e1ddcdc498d66ac32b34b517f30.png" width="120" height="120">
+</div>
+
 <div id="cpanel_product" class="form">
 <%= simple_form_for([:cpanel,@product]) do |f| %>
   <fieldset>
     <legend></legend>
       <%= f.input :name, :class => "span4"%>
       <%= f.input :price,:class => "span4" %>
-      <%= f.file_field :pictures, :html => {:multipart => true} %>
+      <%= link_to("", "#", :id => "product_add_image", :title => t("cpanel.common.upload_image"), :class => "icon small_image")%>
+      <input type="file" id="product_upload_images" />
       <%= f.input :category_id, :collection => Category.where("parent_id != ? AND ctype = ?", 0, 1).collect { |s| [s.name,s.id] } %>
       <%= f.input :keywords, :input_html => {:class => "xxlarge"} %>
       <%= f.input :content, :as => :kindeditor, :label => false, :input_html => { :width => 800, :height => 300 } %>
@@ -42,6 +51,8 @@
     });
 
     function appendImageFromUpload(srcs) {
+        console.log('srcs >>>>>>', srcs);
+        var html = '<img src="image_src" width="120" height="120">'
         var before_text, caret_pos, source, src, src_merged, txtBox, _i, _len;
         txtBox = $(".product_editor");
         caret_pos = txtBox.caretPos();

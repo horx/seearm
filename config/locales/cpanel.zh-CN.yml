@@ -29,6 +29,7 @@
       undelete: "恢复"
       upload: "上传"
       uploading: "正在上传"
+      upload_image: "上传图片"
       published_at: "发表于"
       register: "注册"
       login: "登录"
