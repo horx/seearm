@@ -32,6 +32,7 @@ gem 'social-share-button'
 # Bootstrap
 gem 'bootstrap-will_paginate', '~> 0.0.9'
 gem 'bootstrap_helper', '~> 2.1.2.1'
+gem 'summernote-rails'
 
 # YAML 配置信息
 gem 'settingslogic', '~> 2.0.9'

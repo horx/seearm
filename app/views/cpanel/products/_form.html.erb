@@ -1,13 +1,13 @@
 <div id="cpanel_product" class="form">
-<%= simple_form_for([:cpanel,@product]) do |f| %>
+<%= simple_form_for([:cpanel, @product]) do |f| %>
   <fieldset>
     <legend></legend>
       <%= f.input :name, :class => "span4"%>
-      <%= f.input :price,:class => "span4" %>
+      <%= f.input :price, :class => "span4" %>
       <%= f.file_field :pictures, :html => {:multipart => true} %>
       <%= f.input :category_id, :collection => Category.where("parent_id != ? AND ctype = ?", 0, 1).collect { |s| [s.name,s.id] } %>
-      <%= f.input :keywords, :input_html => {:class => "xxlarge"} %>
-      <%= f.input :content %>
+      <%= f.input :keywords, :html => {:class => "xxlarge"} %>
+      <%= f.input :content,  :html => {:class => 'my_class'} %>
       <div class="form-actions">
       <%= f.submit t("cpanel.common.save"), :class => "btn btn-primary", 'data-disable-with' => t("cpanel.common.saving") %>
       or
